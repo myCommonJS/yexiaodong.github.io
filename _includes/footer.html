@@ -34,13 +34,21 @@
     </div>
 
   </div>
-<XX id="search"></XX>
+<div id="search"></div>
+<div id="SOHUCS" sid="{{ site.title }}"></div>
     <script src="/scripts/jquery.js"></script>
 	<script src="/scripts/bootstrap.js"></script>
+	<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
 	<script src="/scripts/common.js"></script>
+	
 	<script type="text/javascript">
 		$(function(){
 			loadSearch();
+		});
+		
+		window.changyan.api.config({
+			appid: 'cyskr5eV2',
+			conf: 'prod_937d0da0fcc946083549ae4aba7d0a50'
 		});
 	</script>
 </footer>
