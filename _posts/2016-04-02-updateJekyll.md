@@ -48,4 +48,10 @@ categories: Test
 
 # 4 站内搜索问题 #
 
-# 5 博客分类 #
+参考：https://codeboy.me/2016/01/18/jekyll-search-component/
+
+# 5 站点统计与评论
+
+站点统计：http://zhanzhang.cnzz.com/
+评论：使用社会化评论系统，如：多说，友言，畅言等。
+
