@@ -1,0 +1,102 @@
+/*公共*/
+body,ul{
+    margin:0;
+    margin:0;
+    line-height:1.7;
+}
+h1{
+    /*margin-top:0px;*/
+    margin-bottom:0px;
+}
+ul li{
+    list-style-type:none;
+}
+.center{
+    text-align:center;
+    align:center;
+}
+/*header*/
+header{
+    background-image:url("img/header_01.jpg");
+    color:#ffffff;
+    font-size:20px;
+}
+.header-title{
+    padding-top:100px;
+    padding-bottom:50px;
+}
+.header-title h1 {
+    font-size:80px;
+}
+.hr-small{
+    max-width:200px;
+    border-width:3px;
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#ffffff;
+    border-top:solid;
+}
+.nav-logo{
+    float:left;
+    padding:20px;
+    width:150px;
+}
+.nav-ul{
+    float:right;
+}
+.nav-ul li{
+    float:left;
+    padding:20px;
+}
+.header-a:visited{
+    color:#ffffff;
+}
+.header-a:hover{
+    text-decoration:none;
+    color: #0e90d2;
+}
+.header-a:link{
+    color:#ffffff;
+    text-decoration:none;
+}
+/*内容*/
+.section-main{
+    margin-left:150px;
+    margin-right:150px;
+}
+section img{
+    max-width:100%;
+    height:auto;
+    float:left;
+    padding:10px 30px 10px 0px;
+}
+section p{
+    font-size:15px;
+    color:#000;
+}
+section a{
+    text-decoration:none;
+    color:#999;
+}
+a:hover{
+    text-decoration:none;
+    color:#0e90d2;
+}
+.section-title{
+    color:#000;
+}
+.section-content{
+    font-size:18px;
+
+}
+/*
+页码-需要优化成一个组件
+问题：无法居中
+*/
+.pageNum-ul li{
+    float:left;
+    padding:20px;;
+}
+
+
+

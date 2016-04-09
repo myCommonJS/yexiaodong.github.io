@@ -1,0 +1,32 @@
+---
+layout: page
+title: 博客
+permalink: /Blog/
+---
+<section class="section-main">
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="a-beautify ">
+                <img src="/css/img/sectionImg_101.PNG">
+                <div class="">
+                    <h2 class="section-title">{{ post.title }}</h2>
+                    <div class="section-content">
+                        CSS悬浮效果CSS悬浮效果CSS悬浮效果CSS悬浮
+                        CSS悬浮效果CSS悬浮效果CSS悬浮效果CSS悬浮效果CSS悬浮效果CSS悬浮效果CSS悬浮效果CSS悬浮效果...
+                    </div>
+                    <p>Posted by Seaton on {{ post.date | date: "%Y-%m-%d" }}</p>
+                </div>
+                <hr>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+<!--    展示不做
+    <ul class="pager ">
+        <li><a>首页</a></li>
+        <li><a>1</a></li>
+        <li><a>2</a></li>
+        <li><a>尾页</a></li>
+    </ul>-->
+</section>
