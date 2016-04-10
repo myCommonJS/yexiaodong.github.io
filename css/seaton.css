@@ -61,8 +61,10 @@ header{
 }
 /*内容*/
 .article-main,.section-main{
-    margin-left:150px;
-    margin-right:150px;
+    /*margin-left:150px;
+    margin-right:150px;*/
+    width:80%;
+    margin-left:10%;
 }
 section img{
     max-width:100%;
@@ -97,6 +99,70 @@ a:hover{
     float:left;
     padding:20px;;
 }
-
-
+/*
+时间轴
+*/
+.sjz-ul{
+    margin:30px;
+    position: relative;
+}
+.sjz-ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #afdcf8;
+    left:23%;
+    margin-left: -10px;
+}
+.sjz-time{
+    width:15%;
+    position:absolute;/*绝对定位*/
+}
+.sjz-time span{
+    display:block;/*块级元素*/
+    text-align:right;
+    color: #bdd0db;
+}
+.sjz-time span:last-child{
+    font-size:30px;
+    color:#6cbfee;
+}
+.sjz-circle{
+    width:40px;
+    height:40px;
+    position:absolute;
+    background:#46a4da;
+    border-radius:50%;
+    box-shadow:0 0 0 8px #afdcf8;
+    left:23%;
+    margin:0 0 0 -25px;
+}
+.sjz-label{
+    background:#6cbfee;
+    margin:0 0 15px 25%;
+    color:#fff;
+    border-radius:5px;
+    position:relative;
+    padding:20px;
+}
+.sjz-label:after{
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #6cbfee;
+    border-width: 10px;
+    top: 10px;
+}
+.sjz-label h2{
+    border-bottom:1px solid rgba(255,255,255,0.4);
+}
+.sjz-label p{
+    color:#fff;
+}
 
