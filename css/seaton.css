@@ -1,3 +1,4 @@
+
 /*公共*/
 body,ul{
     margin:0;
@@ -128,6 +129,7 @@ a:hover{
 .sjz-time span:last-child{
     font-size:30px;
     color:#6cbfee;
+    font
 }
 .sjz-circle{
     width:40px;
@@ -138,6 +140,9 @@ a:hover{
     box-shadow:0 0 0 8px #afdcf8;
     left:23%;
     margin:0 0 0 -25px;
+}
+.sjz-circle-computer:before{
+    content: "\e001";
 }
 .sjz-label{
     background:#6cbfee;
@@ -162,7 +167,8 @@ a:hover{
 .sjz-label h2{
     border-bottom:1px solid rgba(255,255,255,0.4);
 }
-.sjz-label p{
-    color:#fff;
+.sjz-label ul{
+    padding:0;
 }
+
 
