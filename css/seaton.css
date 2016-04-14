@@ -45,6 +45,9 @@ h1{
     /*margin-top:0px;*/
     margin-bottom:0px;
 }
+hr{
+    border-top:1px solid #ebeef1;
+}
 ul li{
     list-style-type:none;
 }
@@ -61,6 +64,7 @@ header{
 .header-title{
     padding-top:100px;
     padding-bottom:50px;
+    margin-bottom:70px;
 }
 .header-title h1 {
     font-size:80px;
@@ -165,7 +169,6 @@ a:hover{
 .sjz-time span:last-child{
     font-size:30px;
     color:#6cbfee;
-    font
 }
 .sjz-circle{
     width:40px;
@@ -221,7 +224,12 @@ li:nth-child(even) .sjz-label:after{/*:nth-child() even-偶数，old-奇数  */
 /*博客内容-图片居中*/
 article p img{
     display:block;
-    margin:10px auto;/*auto:左右自适应相同值，即居中/
+    margin:10px auto;/*auto:左右自适应相同值，即居中*/
 }
-
+.copyright {
+    color:gray;
+    padding-left:20px;
+    margin:50px 0px 0px 0px;
+    border-left:5px solid #eee;
+}
 
