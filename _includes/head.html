@@ -5,7 +5,8 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <!--时间轴-->
+  <!--搜索样式插件-->
+  <link rel="stylesheet" type="text/css" href="/css/jquery.typeahead.css" />
   <!--我的样式-->
   <link rel="stylesheet" type="text/css" href="/css/seaton.css" />
 </head>
