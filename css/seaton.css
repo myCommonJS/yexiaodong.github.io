@@ -262,7 +262,7 @@ article p img{
     background-color:#111;
     display:none;
 }
-.search-input{
+.search-form{
     position:fixed;
     top:60px;
     width:70%;
