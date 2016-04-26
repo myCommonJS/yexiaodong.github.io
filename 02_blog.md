@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Blog
+title: 博客
+imgName: Blog
 headline: 每天只需记录一点点
-titleCH: 博客
 permalink: /Blog/
 ---
 <section class="section-main">

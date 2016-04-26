@@ -70,10 +70,13 @@ ul li{
 /*header*/
 header{
     /*background-image:url("img/header_01.jpg");*/
+    background:no-repeat center center;/*no-repeat:背景图片只显示一次*/
+    background-color:gray;
     color:#ffffff;
     font-size:20px;
 }
 .header-title{
+
     padding-top:50px;
     padding-bottom:50px;
     margin-bottom:70px;
