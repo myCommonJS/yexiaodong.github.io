@@ -69,12 +69,12 @@ ul li{
 }
 /*header*/
 header{
-    background-image:url("img/header_01.jpg");
+    /*background-image:url("img/header_01.jpg");*/
     color:#ffffff;
     font-size:20px;
 }
 .header-title{
-    padding-top:100px;
+    padding-top:50px;
     padding-bottom:50px;
     margin-bottom:70px;
 }
@@ -134,7 +134,6 @@ section a{
     color:#999;
 }
 a:hover{
-    text-decoration:none;
     color:#0e90d2;
 }
 .section-title{
@@ -282,4 +281,7 @@ article p img{
     border:solid;
     padding:5px;
     border-radius:4px;
+}
+.favorite-a{
+    display:block;
 }

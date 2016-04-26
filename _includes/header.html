@@ -1,19 +1,31 @@
-<header>
+<header style="background-image:url('/css/img/1_{{ page.title }}.jpg')">
   <nav>
     <div class="nav-logo"><a class="header-a" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     </div>
     <ul class="nav-ul">
       {% for my_page in site.pages %}
-      {% if my_page.title %}
-      <li><a href="{{ my_page.url | prepend: site.baseurl }}" class="header-a">{{ my_page.title }}</a></li>
+      {% if my_page.titleCH %}
+      <li><a href="{{ my_page.url | prepend: site.baseurl }}" class="header-a">{{ my_page.titleCH }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>
   </nav>
   <section class="header-title center">
-    <h1 >{{ page.title }}</h1>
+    <h1 >
+      {% if page.title %}
+        {{ page.title }}
+      {% else %}
+        {{site.title}}
+      {% endif %}
+    </h1>
     <hr align="center" class="hr-small center">
-    <span>learn learn learn</span>
+    <span>
+      {% if page.headline %}
+        {{ page.headline }}
+      {% else %}
+        {{site.headline}}
+      {% endif %}
+    </span>
   </section>
 </header>
