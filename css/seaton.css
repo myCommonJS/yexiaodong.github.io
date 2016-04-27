@@ -119,8 +119,8 @@ header{
 .article-main,.section-main{
     /*margin-left:150px;
     margin-right:150px;*/
-    width:80%;
-    margin-left:10%;
+    width:70%;
+    margin-left:15%;
 }
 section img{
     max-width:100%;
@@ -287,4 +287,10 @@ article p img{
 }
 .favorite-a{
     display:block;
+}
+/*代码*/
+pre{
+    background: #E7ECF1;
+    border-radius:8px;
+    padding:10px;
 }
