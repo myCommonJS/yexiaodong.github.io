@@ -2,7 +2,7 @@
 layout: post
 title:  "jekyll默认模板修改"
 date:   2016-03-31
-categories: Test
+categories: jekyll
 excerpt: 虽然jekyll有着jekyllbootstrap模板，但是本人觉得如果是做个博客，只需要将默认的模板修改一下就可以了,而且使用他人模板不利于后期的维护...
 ---
 虽然jekyll有着jekyllbootstrap模板，但是本人觉得如果是做个博客，只需要将默认的模板修改一下就可以了，而且使用他人模板不利于后期的维护。
