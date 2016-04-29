@@ -67,6 +67,9 @@ ul li{
     text-align:center;
     align:center;
 }
+.text-left{
+    float:right;
+}
 /*header*/
 header{
     /*background-image:url("img/header_01.jpg");*/
@@ -293,4 +296,24 @@ pre{
     background: #E7ECF1;
     border-radius:8px;
     padding:10px;
+}
+/*博客标签样式*/
+#blog_header_tab{
+    padding-top:20px;
+}
+.blog-header-tab{
+    background:#A2C8CA;
+    border-radius:5px;
+    padding:15px;
+    margin:5px;
+    color: #fff;
+}
+.blog-header-tab:nth-child(even){
+    background:#5BBBEC;
+}
+.blog-header-tab:hover{
+    background: #aa1496;
+}
+.blog-re-top{
+    padding-top:20px;
 }
