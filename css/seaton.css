@@ -50,7 +50,8 @@
 /*公共*/
 body,ul{
     margin:0;
-    margin:0;
+    padding:0;
+
     line-height:1.7;
 }
 h1{
@@ -124,6 +125,12 @@ header{
     margin-right:150px;*/
     width:70%;
     margin-left:15%;
+}
+@media screen and (max-width:768px){
+    .article-main,.section-main{
+        width:98%;
+        margin-left:1%;
+    }
 }
 section img{
     max-width:100%;
@@ -296,6 +303,7 @@ pre{
     background: #E7ECF1;
     border-radius:8px;
     padding:10px;
+    overflow:auto;
 }
 /*博客标签样式*/
 #blog_header_tab{
