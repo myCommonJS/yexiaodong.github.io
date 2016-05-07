@@ -3,7 +3,8 @@
     <div class="nav-logo"><a class="header-a" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     </div>
-    <ul class="nav-ul icon-menu">
+    <div class="icon-menu">
+    <ul class="nav-ul ">
       <li><a href="{{ site.baseurl }}/" class="header-a current">首页</a></li>
       {% for my_page in site.pages %}
       {% if my_page.title %}
@@ -11,6 +12,7 @@
       {% endif %}
       {% endfor %}
     </ul>
+    </div>
   </nav>
   <section class="header-title center">
     <h1 class="header-h1">
