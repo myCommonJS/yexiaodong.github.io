@@ -1,10 +1,10 @@
 <header style="background-image:url('/css/img/1_{{ page.imgName }}.jpg')">
-  <nav>
+  <nav class="nav">
     <div class="nav-logo"><a class="header-a" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     </div>
-    <ul class="nav-ul">
-      <li><a href="{{ site.baseurl }}/" class="header-a">首页</a></li>
+    <ul class="nav-ul icon-menu">
+      <li><a href="{{ site.baseurl }}/" class="header-a current">首页</a></li>
       {% for my_page in site.pages %}
       {% if my_page.title %}
       <li><a href="{{ my_page.url | prepend: site.baseurl }}" class="header-a">{{ my_page.title }}</a></li>
@@ -13,7 +13,7 @@
     </ul>
   </nav>
   <section class="header-title center">
-    <h1 >
+    <h1 class="header-h1">
       {% if page.title %}
         {{ page.title }}
       {% else %}
