@@ -367,6 +367,12 @@ pre{
         display:block;
     }
     /*重写*/
+    .sjz-ul{
+        margin:0;
+    }
+    .sjz-label{
+        margin:0 0 15px 34%
+    }
     /*博客列表*/
     .article-main,.section-main{
         width:98%;
