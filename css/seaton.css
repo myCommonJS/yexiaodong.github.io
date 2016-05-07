@@ -42,9 +42,6 @@
 .icon-search:before {
     content: "\e903";
 }
-.icon-menu:before {
-    content: "\e900";
-}
 .icon-cross:before {
     content: "\e904";
 }
@@ -350,6 +347,9 @@ pre{
     }
     .nav ul:hover li{/*点击显示菜单*/
         display:block;
+    }
+    .icon-menu:before {
+        content: "\e900";
     }
     /*重写*/
     /*博客列表*/
