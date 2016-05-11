@@ -62,14 +62,14 @@ nav a{
 	margin:0 auto;
 	clear:both;
 }
-.fuwu-caption{
+.bodyer-caption{
 	width: 180px;
 	height: 270px;
 	float:left;
 	background: #AC1F23;
 	color:#FFF;
 }
-.fuwu-item{
+.bodyer-item{
 	background: url(../img/fuwu-item.jpg);
 	width:230px;
 	height: 270px;
