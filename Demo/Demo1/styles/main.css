@@ -1,0 +1,117 @@
+/*公共*/
+body,ul{
+    margin:0;
+    padding:0;
+    line-height:1.7;
+}
+.header-bar{
+	width:100%;
+	height:31px;
+	line-height: 31px;
+	background: #F1F1F1;
+	border-bottom:3px solid #DE0007; 
+}
+.header-bar ul{
+	display: block;
+	width:1200px;
+	height:31px;
+	margin:0 auto;
+}
+ul li{
+    list-style-type:none;
+}
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.header-body{
+	width:1200px;
+	height:106px;
+	margin:0 auto;
+	clear: both;//清楚浮动
+}
+.header-logo{
+	display: block;
+	width:268px;
+	height:106px;
+	float:left;
+	background:url(../img/logo_combo.gif) left center no-repeat;
+}
+nav a{
+	display:block;/*?为啥需要block*/
+	width:100px;
+	height: 106px;
+	overflow: hidden;
+	text-align:center;
+	float:left;/*header-body的clear对它有什么影响*/
+	line-height: 150px;
+}
+.banner-info{
+	display: block;
+	width:100%;
+	margin:0 auto;
+}
+.banner-info img{
+	width:100%;
+}
+.bodyer{
+	width:1200px;
+	margin:0 auto;
+	clear:both;
+}
+.fuwu-caption{
+	width: 180px;
+	height: 270px;
+	float:left;
+	background: #AC1F23;
+	color:#FFF;
+}
+.fuwu-item{
+	background: url(../img/fuwu-item.jpg);
+	width:230px;
+	height: 270px;
+	float:left;
+	margin:0px 0 25PX 25px; 
+	position: relative;
+
+}
+.fuwu-bot{
+	width:100%;
+	height: 201px;
+	margin: 0 auto;
+	clear:both;
+	background:#F1F1F1 url(../img/b1.jpg) center center no-repeat;
+}
+.fuwu-bot-inner{
+	width: 1200px;
+	height: 201px;
+	margin: 0 auto;
+	position: relative;
+}
+.fuwu-bot a{
+	display: block;
+	width:148px;
+	height: 148px;
+	border:1px solid #c5c5c5;
+	border-radius: 74px;
+	background: #FFF;
+	position:absolute;
+	top:29px;
+	cursor:pointer;/*设置鼠标样式*/
+}
+.fuwu-bot .i1{
+	left:20px;
+}
+
+.fuwu-bot .i2{
+	left:222px;
+}
+.fuwu-bot .i3{
+	left:444px;
+}
+.fuwu-bot .i4{
+	left:666px;
+}
