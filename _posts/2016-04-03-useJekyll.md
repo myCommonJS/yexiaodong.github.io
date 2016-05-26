@@ -12,7 +12,18 @@ excerpt: 本文是关于jekyll的一些细节上面的描述，如图片、文�
 1.文件格式大小写；
 2.本地图片可以去掉"site.url"。
 
+# 常见问题
 
+1 **无法启动**，错误如下图：
+![添加图片](/assets/useJekyll_02.PNG)
+错误原因：4000端口被占用。(可通过dos命令查询已使用端口，netstat -a)
+
+解决：在配置文件_config.yml中添加端口设置，如下
+
+{% highlight SQL %}
+#端口
+port: 4400
+{% endhighlight %}
 
 # 注意
 

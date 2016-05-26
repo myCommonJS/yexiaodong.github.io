@@ -19,3 +19,5 @@ github_username:  jekyll
 headline: 分享 累积 进步
 # Build settings
 markdown: kramdown
+#端口
+port: 4400
