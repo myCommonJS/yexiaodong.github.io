@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>2 优化缺陷</title>
+    <link href="../../Styles/zTreeStyle.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-1.4.4.min.js"></script>
+    <script src="../../Scripts/jquery.ztree.core.js"></script>
+    <script type="text/javascript">
+        var zTreeObj;
+        var setting = {};
+        var zNodes = [
+            { name: "test1-图标样式", open: true, icon: "../../Styles/img/diy/2.png", children: [{ name: "test1_1", icon: "../../Styles/img/diy/3.png" }, { name: "test1_2" }] },
+            { name: "test2", open: true, children: [{ name: "test2_1-url-默认", url: "https://www.baidu.com/" }, { name: "test2_1-url-当前窗口", url: "https://www.baidu.com/", target: "_self" }, { name: "test2_2-click", click: "alert('执行onclik事件');" }] }
+        ];
+        $(document).ready(function () {
+            //alert("开始");
+            zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+    </script>
+</head>
+<body>
+    <h1>效果</h1>
+    <div>
+        <ul id="treeDemo" class="ztree"></ul>
+    </div>
+        <h1>方法</h1>
+    1.<strong>设置图片样式</strong>，在每个数据对象中添加“icon”属性，如：icon: "../../Styles/img/diy/2.png"；<br />
+    2.<strong>添加超链接</strong>，添加“url”属性，默认在新的窗口打开,可以设置target属性使其在当前窗口打开（_self)；<br />
+    3.<strong>添加单击事件</strong>，添加click属性；<br />
+</body>
+</html>

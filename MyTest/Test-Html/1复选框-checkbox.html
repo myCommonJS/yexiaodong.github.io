@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JQ获取checkbox中被勾选的选项</title>
+    
+</head>
+<body>
+    <h1>网上例子</h1>
+<input type="checkbox" name="test" id="checkboxID" value="0" />0 
+<input type="checkbox" name="test" value="1" />1 
+<input type="checkbox" name="test" value="2" />2 
+<input type="checkbox" name="test" value="3" />3 
+<input type="checkbox" name="test" value="4" />4 
+<input type="checkbox" name="test" value="5" />5 
+<input type="checkbox" name="test" value="6" />6 
+<input type="checkbox" name="test" value="8" />7 
+<input type="button" onclick="jqchk()" value="提 交" /> 
+    <input type="button" onclick="test()" value="测试" /> 
+    <input type="button" onclick="testID()" value="测试-id" /> 
+
+  <h1>模拟问题例子</h1>
+
+
+    <script src="../Scripts/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        function chk() {
+            var obj = document.getElementsByName('test'); //选择所有name="'test'"的对象，返回数组 
+            //取到对象数组后，我们来循环检测它是不是被选中 
+            var s = '';
+            for (var i = 0; i < obj.length; i++) {
+                if (obj[i].checked) s += obj[i].value + ','; //如果选中，将value添加到变量s中 
+            }
+            //那么现在来检测s的值就知道选中的复选框的值了 
+            alert(s == '' ? '你还没有选择任何内容！' : s);
+        }
+
+        function jqchk() { //jquery获取复选框值 
+            var chk_value = [];
+            var dd = $('input[name="test"]:checked');
+            
+            $('input[name="test"]:checked').each(function () {
+                chk_value.push($(this).val());
+            });
+            alert(chk_value.length == 0 ? '你还没有选择任何内容！' : chk_value);
+        }
+
+        //判断是否被选中
+        function test() {
+            var isCheck = $("input[type='checkbox']").is(':checked');
+            var isCheckID = $("#checkboxID").is(':checked');
+            alert(isCheck);
+        }
+        //判断是否被选中
+        function testID() {
+            var isCheckID = $("#checkboxID").is(':checked');
+            alert(isCheckID);
+        }
+    </script>
+</body>
+</html>

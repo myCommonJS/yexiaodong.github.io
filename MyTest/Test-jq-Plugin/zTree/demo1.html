@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>1 简单使用</title>
+    <link href="../../Styles/zTreeStyle.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script src="../../Scripts/jquery.ztree.core.js"></script>
+    <script type="text/javascript">
+        var zTreeObj;
+        var setting = {};
+        var zNodes = [
+            { name: "test1", open: true, children: [{ name: "test1_1" }, { name: "test1_2" }]},
+            { name: "test2", open: true, children: [{ name: "test2_1" }, { name: "test2_2" }]}
+        ];
+        $(document).ready(function () {
+            //alert("开始");
+            zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+    </script>
+</head>
+<body>
+    <h1>效果</h1>
+    <div>
+        <ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <h1>缺陷</h1>
+    1.图片样式单一;
+    2.没有连接。
+    <h1>遇到问题</h1>
+    1.jQuery-2.2.0版本报错，使用jQuery-1.11.3版本才行；<br />
+    2.$.ready(function(){...});无法使用，需要用$(document).ready(function(){...});<br />
+    3.没有展开/折叠功能,原因zTree默认使用的图片，这些图片在img文件夹中（和zTreeStyle.css在同一个目录中）
+    
+</body>
+</html>

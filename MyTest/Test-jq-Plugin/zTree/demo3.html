@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>3 风格设置</title>
+    <link href="../../Styles/zTreeStyle.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script src="../../Scripts/jquery.ztree.core.js"></script>
+    <script src="../../Scripts/jquery.ztree.excheck.js"></script>
+    <script src="../../Scripts/jquery.ztree.exedit.js"></script>
+ 
+    <script type="text/javascript">
+        var zTreeObj;
+        var setting = {
+            view: {
+                /*
+                1.addHoverDom：设置鼠标移到节点上，在后面显示自定义按钮（addHoverDom方法中定义）、编辑、删除按钮，removeHoverDom同时使用；
+                其值是对应的方法名称，方法有两个参数第一个是treeId-树的ID，即ul标签的ID，第二个treeNode节点对象。
+                */
+                addHoverDom: addHoverDom,//exedit.js
+                removeHoverDom: removeHoverDom,//exedit.js
+                selectedMulti: false,  //设置是否允许同时选中多个节点，默认true。core.js
+                fontCss: getFontCss
+            },
+            check: {    //Excheck.js中
+                enable: false ,  //设置 zTree 的节点上是否显示 checkbox / radio,默认false
+                chkStyle: 'radio',  //勾选框类型,默认checkbox
+                radioType: "level"  //radio 的分组范围,其值有"levle"（默认，在每一级节点范围内当做一个分组）、"all"（整棵树范围内当做一个分组）,注意大小写
+            },
+            data: {
+                simpleData: {   //core.js
+                    enable: true    //输入的newNodes数据是否采用简单数据模式（Array）
+                }
+            },
+            edit: {
+                enable: true    //设置 zTree 是否处于编辑状态,默认false，exedit
+            }
+        };
+        var zNodes = [
+            { id: 1, pId: 0, name: "pNode 1", open: true },//open展开
+            { id: 11, pId: 1, name: "pNode 11" },
+            { id: 111, pId: 11, name: " sNode 111", },
+            { id: 112, pId: 11, name: "sNode 112" },
+            { id: 113, pId: 11, name: "sNode 113" },
+            { id: 114, pId: 11, name: "sNode 114" },
+            { id: 12, pId: 1, name: "pNode 12" },
+            { id: 121, pId: 12, name: "sNode 121" },
+            { id: 122, pId: 12, name: "sNode 122" },
+            { id: 123, pId: 12, name: "sNode 123" },
+            { id: 124, pId: 12, name: "sNode 124" },
+            { id: 13, pId: 1, name: "pNode 13", isParent: true },//isParent:是父节点，即使他下面没有节点
+            { id: 2, pId: 0, name: "pNode 2" },
+            { id: 21, pId: 2, name: "pNode 21", open: true },
+            { id: 211, pId: 21, name: "sNode 211" },
+            { id: 212, pId: 21, name: "sNode 212" },
+            { id: 213, pId: 21, name: "sNode 213" },
+            { id: 214, pId: 21, name: "sNode 214" },
+            { id: 22, pId: 2, name: "pNode 22" },
+            { id: 221, pId: 22, name: "sNode 221" },
+            { id: 222, pId: 22, name: "sNode 222" },
+            { id: 223, pId: 22, name: "sNode 223" },
+            { id: 224, pId: 22, name: "sNode 224" },
+            { id: 23, pId: 2, name: "pNode 23" },
+            { id: 231, pId: 23, name: "sNode 231" },
+            { id: 232, pId: 23, name: "sNode 232" },
+            { id: 233, pId: 23, name: "sNode 233" },
+            { id: 234, pId: 23, name: "sNode 234" },
+            { id: 3, pId: 0, name: "pNode 3", isParent: true }
+        ];
+        $(document).ready(function () {
+            //alert("开始");
+            zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+            setCheck();
+            $("#r1").bind("change",setCheck);
+            $("#r2").bind("change",setCheck);
+            $("#disablechk").bind("change", setCheck);
+            $("#expandAllBtn").bind("click", { type: "expandAll" }, expandNode);
+            $("#collapseAllBtn").bind("click", { type: "collapseAll" }, expandNode);
+        });
+        //设置zTree的Check参数
+        function setCheck() {
+            setting.check.chkStyle = $("#r1").attr("checked") ? "checkbox" : "radio";
+            setting.check.enable = $("#disablechk").is(':checked');
+            zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        }
+        function addHoverDom(treeId, treeNode) {
+            var aObj = $("#" + treeNode.tId + "_a");//节点对象ID
+            if ($("#diyBtn_" + treeNode.id).length > 0) return;//自定义按钮已存在，直接结束方法
+            var editStr = "<span id='diyBtn_space_" + treeNode.id + "' > </span>"
+                + "<button type='button' class='diyBtn1' id='diyBtn_" + treeNode.id
+                + "' title='" + treeNode.name + "' onfocus='this.blur();'></button>";
+            aObj.append(editStr);
+            var btn = $("#diyBtn_" + treeNode.id);
+            if (btn) btn.bind("click", function () { alert("diy Button for " + treeNode.name); });
+        };
+        function removeHoverDom(treeId, treeNode) {
+            $("#diyBtn_" + treeNode.id).unbind().remove();
+            $("#diyBtn_space_" + treeNode.id).unbind().remove();
+        };
+
+        //展开或折叠节点
+        function expandNode(e) {
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+            var type = e.data.type;
+            var nodes = zTree.getSelectedNodes();
+            if (type.indexOf("All") < 0 && nodes.length == 0) {
+                alert("请先选择一个父节点");
+            }
+
+            if (type == "expandAll") {
+                zTree.expandAll(true);
+            } else if (type == "collapseAll") {
+                zTree.expandAll(false);
+            } 
+        }
+
+        //查询
+        function searchNode() {
+            var value = $("#txtIdSearch").val();
+            var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
+            if (value == "") {
+                return;
+            }
+            else {
+                var nodeList = treeObj.getNodesByParamFuzzy("name", value, null);
+                for (var i = 0, l = nodeList.length; i < l; i++) {
+                    nodeList[i].highlight = true;   //高亮
+                    var nodePerent = nodeList[i].getParentNode();//父节点
+                    treeObj.expandNode(nodePerent, true, false, true);//父节点展开
+                    treeObj.updateNode(nodeList[i]);//更新某节点数据，主要用于该节点显示属性的更新。
+                }
+                //alert(nodeList);
+            }
+        }
+
+        //改变节点样式
+        function getFontCss(treeId, treeNode) {
+            return (!!treeNode.highlight) ? { color: "#A60000", "font-weight": "bold" } : { color: "#333", "font-weight": "normal" };
+
+        }
+    </script>
+</head>
+<body>
+
+    <h1>效果</h1>
+    <button onclick="return false" id="expandAllBtn">展开所有节点</button>
+    <button onclick="return false" id="collapseAllBtn">折叠所有节点</button>
+    <br /><br />
+    <input type="text" id="txtIdSearch" />
+    <button onclick="searchNode()" id="Button1">查询</button>
+    <div>
+        <ul id="treeDemo" class="ztree"></ul>
+    </div>
+
+    <div>
+        <input type="radio" id="r1" name="r" value="checkbox" checked />checkbox
+        <input type="radio" id="r2" name="r" value="radio" />Radio
+        <input type="checkbox" id="disablechk" checked="checked"/> Disable
+    </div>
+
+    <h1>遇到问题</h1>
+    <strong>1.查询结果没有高亮，</strong>原因：没有设置fontCss属性（在树的View属性中），其值是一个方法，修改字体样式。<br />
+    <strong>2.Disable选项无法获取checked属性的值（undefined），</strong>原因未知，解决-使用$("#disablechk").is(':checked')。<br />
+    <strong>3.zTree.js将树的“+”，“-”改成“>"，</strong>方法-自己修改样式，同时去除默认的zTree样式
+</body>
+</html>
