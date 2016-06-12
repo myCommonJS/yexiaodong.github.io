@@ -1,0 +1,58 @@
+.pross{
+    position:relative;
+    background:#ddd;
+    float:left;
+    width:300px;
+    height:30px;
+    line-height:30px;
+    color:#666;
+    font-size:16px;
+    padding-left:10px;
+    overflow:hidden;
+}
+.pross-ok{
+    background:#f96;
+    color:#fff;
+}
+.pross .index{
+    background: #999;
+    display: inline-block;
+    width:18px;
+    height:18px;
+    line-height:18px;
+    border-radius:18px;
+    text-align:center;
+    margin-right:10px;
+}
+.pross-ok .index{
+    background:#fff;
+    color:#f96;
+}
+/*真正的设置*/
+.pross .pross-dir{
+    background:#ddd;
+    position:absolute;
+    top:-15px;/*上下边框为30，所以它为30/2=15*/
+    right:-19px;/*左右边框为19*/
+}
+.pross .pross-dir .outside{
+    border-color:transparent transparent transparent #f8f8f8;/*三角形向右*/
+}
+.pross-ok .pross-dir .outside{
+    border-color:transparent transparent transparent #f8f8f8;/*三角形向右*/
+}
+.pross .pross-dir .inside{
+    border-color:transparent transparent transparent #ddd;/*三角形向右*/
+}
+.pross-ok .pross-dir .inside{
+    border-color:transparent transparent transparent #f96;
+}
+
+.inside{
+    display: inline-block;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:30px 19px;
+
+}

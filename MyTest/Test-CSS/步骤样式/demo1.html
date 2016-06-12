@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>步骤样式</title>
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+    <div class="register-progress">
+        <div class="pross pross-ok"><span class="index">
+            1</span>验证手机号
+            <div class="pross-dir pross-dir-bg">
+                <span  class="outside"></span>
+                <span class="inside"></span><!-- 向右的三角形 -->
+            </div>
+        </div>
+        <div class="pross">
+            <span class="index">2</span>填写用户名
+            <div class="pross-dir pross-dir-bg">
+                <span  class="outside"></span>
+                <span class="inside"></span><!-- 向右的三角形 -->
+            </div>
+        </div>
+        <div class="pross">
+            <span class="index">3</span>注册成功
+            <div class="pross-dir pross-dir-bg">
+                <span  class="outside"></span><!--倍覆盖的向右的无边型（白色）->
+                <span class="inside"></span><!-- 向右的三角形 -->
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1>问题</h1>
+   <strong>.pross .index的样式覆盖了.pross-ok .index</strong><br>
+    原因：CSS样式的覆盖是根据样式在文件中的前后位置，后面的覆盖前面的。
+    解决：将.pross-ok .index样式放到后面。
+</body>
+</html>

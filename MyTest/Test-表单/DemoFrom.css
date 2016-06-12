@@ -1,0 +1,74 @@
+.PFrom{
+    width:960px;
+    margin:0 auto;
+    border: 1px solid #e2e2e2;
+    padding:20px 10px 10px 10px;
+    font-family: 'Microsoft yahei';
+    border-radius: 4px;
+}
+.PFrom .tr{
+    padding-bottom:15px;
+
+}
+.PFrom .td-label{
+    width:200px;
+    text-align: right;
+    display:inline-block;
+    vertical-align:top;
+    font-size:18px;
+}
+.PFrom .td-label .red{
+    color:red;
+}
+.PFrom .td-input{
+    box-sizing:border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left:10px;
+}
+.PFrom .td-input-short{
+    width:215px;
+    height:35px;
+    display: inline-block;
+}
+.PFrom .td-input-lang{
+    width:640px;
+    height:35px;
+}
+.PFrom .td-input-area{
+    width:640px;
+}
+.PFrom .tr-btn{
+    padding:20px 0;
+    border-top:1px dashed #e2e2e2;
+    text-align: center;
+}
+.PFrom .tr-btn .btn{
+    width:240px;
+    padding:10px;
+    background-color: #666;
+    border-color: #666;
+    border-radius: 4px;
+    border:1px solid transparent;
+    font-size: 18px;
+    color:#fff;
+}
+.PFrom .tr-btn .save{
+    background-color: #ffcc33;
+    border-color: #ffcc33;
+    color:#000;
+}
+.PFrom h1{
+    border-bottom:1px solid #e2e2e2;
+    text-align:center;
+    padding-bottom:20px;
+}
+.PFrom .describe {
+    display:block;
+    width:190px;
+    color:#A0A09A;
+    font-size:7px;
+}
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目信息</title>
+    <link rel="stylesheet" href="DemoFrom.css">
+</head>
+<body>
+<!-- 样式控制 -->
+<div class="PFrom">
+    <h1>项目信息详情</h1>
+    <div class="tr">
+        <label class="td-label">项目单位名称：</label>
+        <input class="td-input td-input-lang" type="text" placeholder="请输入项目单位名称">
+    </div>
+    <div class="tr">
+        <label class="td-label"><span class="red">*</span>推荐项目名称：</label>
+        <input class="td-input td-input-lang" type="text" placeholder="请输入推荐项目名称">
+    </div>
+    <div class="tr">
+        <label class="td-label"><span class="red">*</span>项目单位联系人：</label>
+        <input class="td-input td-input-short" type="text" placeholder="请输入项目单位联系人">
+        <label class="td-label"><span class="red">*</span>联系电话：</label>
+        <input class="td-input td-input-short" type="text" placeholder="请输入联系电话">
+    </div>
+    <div class="tr">
+        <label class="td-label"><span class="red">*</span>邮箱：</label>
+        <input class="td-input td-input-short"  type="text" placeholder="请输入邮箱">
+        <label class="td-label">职务职称：</label>
+        <input class="td-input td-input-short" type="text" placeholder="请输入职务职称">
+    </div>
+    <div class="tr">
+        <label class="td-label"><span class="red">*</span>项目所属领域：</label>
+        <select class="td-input td-input-short">
+            <option value ="volvo">--请选择--</option>
+        </select>
+        <label class="td-label"><span class="red">*</span>项目成熟度：</label>
+        <select class="td-input td-input-short">
+            <option value ="volvo">--请选择--</option>
+        </select>
+    </div>
+    <div class="tr">
+        <label class="td-label">项目赞示形式：</label>
+        <input class="td-input td-input-lang " type="text" placeholder="请输入项目赞示形式">
+    </div>
+    <div class="tr">
+        <label class="td-label">项目简介：
+            <span class="describe">包括关键技术名称概念、技术先进性、技术特点及创新点、技术与产品应用领域（1000字以内）</span>
+        </label>
+        <TextArea class="td-input td-input-area" rows="6" placeholder="请输入项目简介"></TextArea>
+    </div>
+    <div class="tr">
+        <label class="td-label">
+            知识产权及获奖情况：
+            <span class="describe">获奖类别、奖项级别、是否具有核心技术（自主知识产权）、专利等（1000字以内）</span>
+        </label>
+        <TextArea class="td-input td-input-area" rows="6" placeholder="请输入知识产权及获奖情况"></TextArea>
+    </div>
+    <div class="tr">
+        <label class="td-label">
+            其他相关说明：
+            <span class="describe">(1000字以内)</span>
+        </label>
+        <TextArea class="td-input td-input-area" rows="6" placeholder="请输入其他相关说明"></TextArea>
+    </div>
+
+
+    <div class="tr-btn">
+        <button class="btn save">附件下载</button>
+        <button class="btn ">关闭</button>
+    </div>
+</div>
+</body>
+</html>
