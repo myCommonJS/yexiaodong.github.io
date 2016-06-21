@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间运算-加减</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var dateStr = document.getElementById("myDate").value;
+            var MinuteStr = eval(document.getElementById("mySeconds")).value;
+            var resultStr = dateAddMinute(dateStr,MinuteStr);
+            //alert("结果："+resultStr)
+        }
+
+        //日期加分钟
+        function  dateAddMinute(pDate,pMinute) {
+            var date = new Date(pDate);
+            var resultDate = new Date();
+            var resultStr ; //返回值
+
+            date = date.getTime() + pMinute*60*1000;
+            resultDate.setTime(date);
+            var year = resultDate.getFullYear();
+            var month = resultDate.getDay() + 1;
+            var day = resultDate.getDay();
+            var hours = resultDate.getHours();
+            var minutes = resultDate.getMinutes();
+            var seconds = resultDate.getSeconds();
+            month = month<9?"0"+month:month;
+            day = day<9?"0"+day:day;
+            hours = hours<9?"0"+hours:hours;
+            minutes = minutes<9?"0"+minutes:minutes;
+            seconds = seconds<9?"0"+seconds:seconds;
+            resultStr = year + "-" + month + "-" + day +
+                            " " + hours + ":" + minutes + ":" + seconds;
+            return resultStr;
+        }
+
+        function btnOnClick() {
+            var dateStr = document.getElementById("myDate").value;
+            var MinuteStr = eval(document.getElementById("mySeconds")).value;
+            var resultStr = dateAddMinute(dateStr,MinuteStr);
+            alert("结果："+resultStr)
+        }
+    </script>
+</head>
+<body>
+<h1>时间运算-加减</h1>
+
+日期：<input id="myDate" type="text" name="myDate" value="2016-06-20 17:01:02">
+分钟：<input id="mySeconds" type="text" name="mySeconds" value="2">
+<button onclick="btnOnClick()">相加</button>
+结果：<input id="resultStr" type="text" name="resultStr" >
+</body>
+</html>

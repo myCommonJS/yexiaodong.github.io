@@ -1,0 +1,29 @@
+
+.show-data {
+    display:inline-block;
+    position:relative;
+    width:35px;
+    height:36px;
+}
+.show-data .data-main {
+    display:inline-block;
+    width:14px;
+    padding:0px 4px;
+}
+.show-data .data-top {
+    position:absolute;
+    top:2px;
+    font-size:6px;
+}
+.show-data .data-bottom {
+    position: absolute;
+    top:20px;
+    font-size:6px;
+}
+
+.optional-class{
+    cursor:pointer;
+}
+.optionaled-class{
+    margin-right:5px;
+}

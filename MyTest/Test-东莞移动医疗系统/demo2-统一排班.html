@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统一排班-测试js</title>
+    <link rel="stylesheet" href="demo1.css">
+</head>
+<body>
+<!-- 当前选择的班次 -->
+<div>
+    <span>排班样式</span>
+    <div id="selecting-class"></div>
+    <input id="multipleClass" name="multipleClass" type="checkbox" value="true">多班次
+</div>
+<hr>
+
+<!-- 可选择的班次 -->
+<div data-id="1" class="show-data optional-class" style="background-color:#00FF00;">
+    <span class= "data-main" >午班</span>
+    <span class="data-top">上</span>
+    <span class="data-bottom">下</span>
+</div>
+<div data-id="2" class="show-data optional-class" style="background-color:#00FF00;">
+    <span class= "data-main" >午班</span>
+    <span class="data-top"></span>
+    <span class="data-bottom">下</span>
+</div>
+<div data-id="3" class="show-data optional-class" style="background-color:#00FF00;">
+    <span class= "data-main" >午班</span>
+    <span class="data-top">上</span>
+    <span class="data-bottom"></span>
+</div>
+
+<script src="../Scripts/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+       $(".optional-class").click(optionalClass);
+    });
+
+    function optionalClass() {
+        var isMultipleClass = $("#multipleClass").is(":checked");
+        var clickClass = $(this).clone().removeClass("optional-class").addClass("optionaled-class");
+        var clickClassID = clickClass.attr("data-id");
+
+        if(isMultipleClass){
+            if(isClassExist(clickClassID)){
+                $("#selecting-class").append(clickClass);
+            }
+        }else{
+            $("#selecting-class").html(clickClass);
+        }
+    }
+    
+    /*判断元素是否存在，存在返回false，不存在返回true */
+    function  isClassExist(id) {
+        var isResult = true;
+        $(".optionaled-class").each(function () {
+            if($(this).attr("data-id") == id){
+                isResult = false;
+                return false;
+            }
+        });
+        return isResult;
+    }
+</script>
+</body>
+</html>

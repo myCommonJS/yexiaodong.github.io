@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        span{
+            float:left;
+            width:50px;
+            height:50px;
+            padding:10px;
+            margin:10px;
+            border:1px dotted #333;
+        }
+
+        div{
+            border:1px solid red;
+            width:200px;
+            padding:10px;
+        }
+
+        .p{
+            overflow: hidden;   /*清除浮动*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>浮动元素被覆盖</span>
+        <p>
+            浮动曾是一种神奇的布局技术，但在近些年来越来越被诟病，因为浮动往往会导致一些意料之外的结果，而且经常面临清除浮动的痛苦。
+            而这一切的根源在于：浮动最初本不是一种用了布局的技术。
+
+            浮动框会脱离常规流在当前向左或向右漂移，浮动框外的行框可以沿着浮动框的边缘进行渲染——这一特性可以用来实现文字环绕图片这样的效果。
+        </p>
+    </div>
+<hr>
+    <div>
+        <span>浮动与BFC-清除浮动</span>
+        <p class="p">
+            如果想将右侧文字竖直排列，则可以通过触发p的块级格式化上下文来实现，因为对于table元素、块级替换元素或者在常规流中创建了块级格式上下文的元素，
+            它们的border  box 在同一个块级格式化上下文中不能覆盖任何浮动元素。
+            在有足够的空间情况下，也可以把它紧临浮动元素放置，否则放置在浮动元素的下面。
+        </p>
+    </div>
+</body>
+</html>

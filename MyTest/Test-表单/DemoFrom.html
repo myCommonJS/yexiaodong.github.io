@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>项目信息</title>
     <link rel="stylesheet" href="DemoFrom.css">
+    <link rel="stylesheet" href="../Styles/jquery-ui.css">
 </head>
 <body>
 <!-- 样式控制 -->
@@ -15,7 +16,14 @@
     </div>
     <div class="tr">
         <label class="td-label"><span class="red">*</span>推荐项目名称：</label>
+        <div class="input-error">
         <input class="td-input td-input-lang" type="text" placeholder="请输入推荐项目名称">
+        <div class="error">
+        <span class="field-validation-error" data-valmsg-replace="true" data-valmsg-for="OrganizationType">
+            <span id="OrganizationType-error">请输入推荐项目名称</span>
+        </span>
+        </div>
+        </div>
     </div>
     <div class="tr">
         <label class="td-label"><span class="red">*</span>项目单位联系人：</label>
@@ -44,6 +52,12 @@
         <input class="td-input td-input-lang " type="text" placeholder="请输入项目赞示形式">
     </div>
     <div class="tr">
+        <label class="td-label">附件：
+            <span class="describe">附件大小不能超过5M，附件格式为：png、jpg、xls、doc、xlsx</span>
+        </label>
+        <input class="td-input td-input-button" type="button" value="上传附件" onclick="UploadFilePage()" />
+    </div>
+    <div class="tr">
         <label class="td-label">项目简介：
             <span class="describe">包括关键技术名称概念、技术先进性、技术特点及创新点、技术与产品应用领域（1000字以内）</span>
         </label>
@@ -70,5 +84,25 @@
         <button class="btn ">关闭</button>
     </div>
 </div>
+
+<!-- 上传附件窗口 -->
+<div id="dialog" title="附件上传">
+    <p>ddddd</p>
+</div>
+
+<script src="../Scripts/jquery-1.11.3.js"></script>
+<script src="../Scripts/jquery-ui.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$("#dialog").dialog();
+    });
+    $("#dialog").dialog({});
+
+    function UploadFilePage() {
+        //alert("d");
+        $("#dialog").dialog("open" );
+    }
+</script>
 </body>
 </html>

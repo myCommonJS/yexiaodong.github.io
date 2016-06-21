@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常规流-清除浮动</title>
+    <style>
+        #sibling-box{
+            border:1px dotted #333;
+            margin-bottom:10px;
+            height:10px;
+        }
+
+        #bfc-box{
+            border:1px solid #333;
+            overflow:hidden;    /*清除浮动*/
+        }
+
+        #float-box{
+            float:left;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sibling-box">sibling-box</div>
+    <div id="bfc-box">
+        <div id="float-box">float-box</div>
+    </div>
+
+    <p>该例子中即使box没有设置边框，且没有浮动，float-box和sibling-box的边距也不会折叠，功劳来自BFC（包含块格式化上下文）</p>
+</body>
+</html>
