@@ -1,5 +1,5 @@
 window.onload = function () {
-    console.info(getAppCacheStatues());
+    console.info("缓存状态："+getAppCacheStatues());
 }
 function getAppCacheStatues(){
     var appCache = window.applicationCache;
