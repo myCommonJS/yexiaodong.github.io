@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>敏感信息加密</title>
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        function test() {
+            var original = $(".old").html();
+            shieldInfo(original,3,4)
+        }
+        /*
+        屏蔽敏感信息
+         original：原数据
+         start：开始位置
+         num:屏蔽的长度
+         */
+        function shieldInfo(original,start,num) {
+            var beforeInfo = original.substr(0,start);
+            var shieldInfo = original.substr(start,num);
+            var afterInfo = original.substr((start+num));
+
+            shieldInfo=shieldInfo.replace(/[1-9]/g,"*");
+            var returnStr = beforeInfo + shieldInfo +afterInfo;
+            alert(returnStr);
+            return returnStr;
+        }
+    </script>
+</head>
+<body>
+<div class="old">18825195515</div>
+<button onclick="test()">加密</button>
+<div class="new"></div>
+</body>
+</html>

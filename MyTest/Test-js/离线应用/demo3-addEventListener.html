@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" manifest="/appcache.manifest">
+<head>
+    <meta charset="UTF-8">
+    <title>接口编程-事件监听</title>
+    <script type="text/javascript">
+        //load 事件后在进行监听
+        window.addEventListener('load',function (e) {
+            window.applicationCache.addEventListener('updateready',function (e) {
+                if(getAppCacheStatues() == 'UPDATEREADY'){
+                    //此时浏览器已经下载好需要被缓存的文件
+                    //调用swapCache()方法以填充
+                    window.applicationCache.swapCache();
+                    //在重新加载页面之前，最好提示客户
+                    if(confirm('本程序有更新，是否刷新？')){
+                        widow.location.reload();
+                    }else {
+                        //此时manifest文件无更新。
+                        alert("此时manifest文件无更新");
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+使用applicationCache对象的监听updateready事件来确定什么时候调用update和swapCache方法。
+</body>
+</html>

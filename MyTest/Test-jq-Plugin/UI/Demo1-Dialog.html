@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
     <script>
         $(function() {
-            $( "#dialog" ).dialog();
+            //$( "#dialog" ).dialog();
         });
+        function clickDialog() {
+            $( "#dialog" ).dialog();
+        }
     </script>
 </head>
 <body>
@@ -19,6 +22,7 @@
     <p>这是一个默认的对话框，用于显示信息。对话框窗口可以移动，调整尺寸，默认可通过 'x' 图标关闭。</p>
 </div>
 
+<button onclick="clickDialog()">测试</button>
 
 </body>
 </html>

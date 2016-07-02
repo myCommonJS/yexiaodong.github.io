@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My97日期控件</title>
+    <script src="WdatePicker.js"></script>
+
+</head>
+<body>
+一般：<input class="Wdate" type="text" id="d15" onFocus="WdatePicker({isShowClear:false,readOnly:true})"/>
+<br><br>
+月份：<input type="text" class="Wdate" id="d413" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+时间设置：<input type="text" class="Wdate" id="d413" onclick="WdatePicker({dateFmt:'HH:mm',quickSel:['08:30','09:00','09:30','10:00','10:30']})"/>
+<br><br>
+东莞移动-问题无法选择“00：00”：<input type="text" onblur="CheckShiftTime(6);" name="shiftTime" id="shift_6" value="" onclick="WdatePicker({ dateFmt: 'HH:mm', quickSel: ['22:00', '22:30', '23:00', '23:30', '00:00'] })">
+<h1>分析</h1>
+    设置了时间格式为{dateFmt:'yyyy-M'}就可以使其变成月选择，其中'yyyy-M'可以变为'yyyy年M月',<br>
+    其判断根据y、M 这两个字母，其他的格式是显示在文本框中的格式。<br>
+    M：表示月份可以未一位数，如“2016-3”<br>
+    MM：表示月份必须为两位数，如“2016-03”<br>
+quickSel：设置快速选择。
+</body>
+</html>

@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# V-demo3
+# 指定会缓存的资源
+CACHE:
+test.js
+
+# 指定必须在有网络是才能访问的资源
+NETWORK:
+test2.js
+
+# 降级访问
+FALLBACK:
+# 根目录如果不可用，则读取offline.html文件
+/ /offline.html
+# 所有images/目录下不可用时被请求，则读取images/offline.jpg

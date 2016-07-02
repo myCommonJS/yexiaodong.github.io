@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>监听Storage事件</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            if(window.localStorage){//检测浏览器是否支持localStorage
+                //事件监听-不成功
+                window.addEventListener("storage",function (e) {
+                    //尚无浏览器完整实现这些事件
+                    console.log("监听Storage事件，Storage的值被改变时触发。 key=" + e.key + " ；原值 "
+                            + e.oldValue + " ；新值=" + e.newValue +"；URL=" + e.url);
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

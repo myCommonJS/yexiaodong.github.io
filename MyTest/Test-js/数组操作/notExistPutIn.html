@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不存在就加入数组</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var allClass = new Array();
+            allClass[0] = "123";
+            allClass[1] = "234";
+            var strB ="345";
+            allClass = addToArray(allClass,strB);
+            alert(allClass[2]);
+        }
+        
+        //字符串strB如果不存在字符串数组中，就加入字符串数组arrA
+        function addToArray(arrA, strB) {
+            var isExist = false;
+            for (var i = 0; i < arrA.length; i++) {
+                if (arrA[i] == strB) {
+                    isExist = true;
+                    break;
+                }
+            }
+            if (!isExist) {
+                arrA[arrA.length] = strB;
+            }
+            return arrA;
+        }
+    </script>
+</head>
+<body>
+字符串strB如果不存在字符串数组中，就加入字符串数组arrA
+</body>
+</html>

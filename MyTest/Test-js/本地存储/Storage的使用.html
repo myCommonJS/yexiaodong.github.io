@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML的Storage</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            if(window.localStorage){//检测浏览器是否支持localStorage
+                //存储几个键值对
+                localStorage['book'] = 'H5 开发';
+                localStorage.setItem('author','yexd');
+                localStorage.setItem('2016','year');
+
+                //读取
+                console.info(localStorage.getItem('book')); //H5 开发
+                console.info(localStorage.author);           //yexd
+                console.info(localStorage['2016']);         //year
+
+                //删除
+                delete localStorage['author'];
+                console.info("删除author后：" + localStorage['author']);  //删除author后：undefined
+                localStorage.removeItem('2016');
+                console.info("删除2016后：" + localStorage['2016']);      //删除2016后：undefined
+                localStorage.clear();//删除所有的key
+
+                //存储JSON
+                var jsonAuthor = {
+                    'name':'filod lin'
+                }
+                localStorage['jsonAuthor'] = jsonAuthor ;
+                console.info(localStorage['jsonAuthor']); //[Object,Object]
+                localStorage['jsonAuthor'] = JSON.stringify(jsonAuthor);
+                console.log(JSON.parse(localStorage['jsonAuthor']).name); //filod lin
+            }
+        }
+    </script>
+</head>
+<body>
+Web Storage的使用非常方便，速度更快，也更安全，只会存储在浏览器中而不会随HTTP请求发送到服务器。它可以轻松的存储大量数据而丝毫不会影响网站的性能。<br>
+Storage在浏览器中被实现为一个类型，但开发者是不被允许实例化Storage对象的，浏览器已经内置有两个已经实例化好的对象：<br>
+1.sessionStorage——存储的数据，只在单个页面的会话期间有效，类似一个页面的全局变量。<br>
+2.localStorage——存储的数据，会被持久化到客户端，而且永远不会过期（cookie可以设置过期时间），并且其容量也不像cookie那样受限制。<br>
+如果Storage要存储JSON对象，则可以先使用window.JSON对象提供的stringify和parse方法对JSON数据进行序列化和反序列化。
+</body>
+</html>

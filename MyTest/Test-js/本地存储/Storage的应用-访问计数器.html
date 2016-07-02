@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问计数器</title>
+</head>
+<body>
+    本次访问已经查看过该页面<span id="count1"></span>次<br/>
+    历史上你已经查看过该页面<span id="count2"></span>次<br/>
+    <button id="btn">清零</button>
+    <script type="text/javascript">
+        function updateCounter() {
+            document.getElementById("count1").innerHTML = sessionStorage.pageLoadCount || 0;
+            document.getElementById("count2").innerHTML = localStorage.pageLoadCount || 0;
+        }
+        //第一次进入页面时，将两个计数都设置为0
+        if(sessionStorage.getItem("pageLoadCount") == null){
+            sessionStorage.setItem("pageLoadCount",0);
+        }
+        if(localStorage.getItem("pageLoadCount") == null){
+            localStorage.setItem("pageLoadCount",0);
+        }
+        //每次加载页面，把存储的数据取出后增1
+        sessionStorage.pageLoadCount = parseInt(sessionStorage.getItem("pageLoadCount")) + 1;
+        localStorage.pageLoadCount = parseInt(localStorage.getItem("pageLoadCount")) + 1;
+        updateCounter();
+        document.getElementById("btn").onclick = function () {
+            localStorage.clear();
+            sessionStorage.clear();
+            updateCounter();
+        }
+    </script>
+</body>
+</html>

@@ -27,3 +27,7 @@
 .optionaled-class{
     margin-right:5px;
 }
+.selected-class{
+    margin-right:5px;
+    background-color:#B7BDB7;
+}

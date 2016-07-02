@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookie的使用</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.cookie = "uid=123yxd";
+        }
+
+        //获取cookie
+        function getCookie(name) {
+            var cookieName = encodeURIComponent(name) + "=",
+                    cookieStart = document.cookie.indexOf(cookieName),
+                    cookieValue = null,
+                    cookieEnd;
+            if (cookieStart > -1) {
+                cookieEnd = document.cookie.indexOf(";", cookieStart);
+                if (cookieEnd == -1) {
+                    cookieEnd = document.cookie.length;
+                }
+                cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
+            }
+            return cookieValue;
+        }
+
+        //设置cookie
+        function setCookie(name, value, opt_expiress, opt_path, opt_domain, opt_secure) {
+            var cookieText = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+            if(opt_expiress instanceof Date){
+                //cookie的过期时间只支持GMT格式
+                cookieText += ";expires=" + opt_expiress.toGMTString();
+            }
+            if(opt_path){
+                //path表示cookie起作用的路径，比如/path1 下设置的cookie，path2的页面则无法访问
+                cookieText += ";path=" + opt_path;
+            }
+            if(opt_domain){
+                //只能设置子域，而不能跨域
+                cookieText += ";domain=" + opt_domain;
+            }
+            if(opt_secure){
+                //安全标志，指定该标志后只有在 使用SSL连接时才会发送 cookie（即发送到https://开头的域）
+                cookieText += ";secure";
+            }
+            document.cookie = cookieText;
+        }
+
+        //删除cookie
+        function unsetCookie(name,path,domain,secure) {
+            setCookie(name, "",new Date(0),path,domain,secure);e
+        }
+
+    </script>
+</head>
+<body>
+由于document.cookie只能获取到完整的字符串，为了方便操作cookie，一般封装两个函数——getCookie、setCookie。
+
+</body>
+</html>
