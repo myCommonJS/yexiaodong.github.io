@@ -1,3 +1,16 @@
 CACHE MANIFEST
 # V-1.3
+#test.js为测试demo使用
 test.js
+#一些文件为博客网站使用
+http://yexiaodong.github.io/css/vs.css
+http://yexiaodong.github.io/css/jquery.typeahead.min.css
+http://yexiaodong.github.io/css/seaton.css
+http://yexiaodong.github.io/scripts/jquery.js
+http://yexiaodong.github.io/scripts/jquery.typeahead.min.js
+http://yexiaodong.github.io/scripts/seaton.js
+http://yexiaodong.github.io/css/img/sectionImg_101.PNG
+http://yexiaodong.github.io/css/img/1_.jpg
+http://yexiaodong.github.io/css/fonts/icomoon.ttf?runfas
+http://yexiaodong.github.io/search-data.json
+
