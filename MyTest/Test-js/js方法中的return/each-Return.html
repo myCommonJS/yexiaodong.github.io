@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each方法中的return测试</title>
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        function testReturn() {
+            $("section").each(function () {
+                $(this).find("p").each(function () {
+                    console.info($(this).html());
+                    return false;
+                });
+                console.info("return false之后-each方法中");
+            });
+
+            console.info("return false之后-外方法中");
+        }
+    </script>
+</head>
+<body>
+<article>
+    <h1>each方法中return的停止执行情况</h1>
+    <section>
+        <h2>测试数据</h2>
+        <p>p1</p>
+        <p>p2</p>
+        <button onclick="testReturn()" onchange="">开始测试</button>
+    </section>
+    <section>
+        <h2>结论</h2>
+        <p>结论1：return false只会跳出当前循环，所以在嵌套的each循环中，外层的each循环会继续执行</p>
+        <p>结论2</p>
+    </section>
+</article>
+</body>
+</html>

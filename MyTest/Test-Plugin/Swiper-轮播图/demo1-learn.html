@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swiper学习1</title>
+    <link rel="stylesheet" href="swiper-3.3.1.min.css">
+    <style>
+        /* 美化 */
+        .swiper-container{
+            width:600px;
+            height: 300px;
+            background-color: #60ced2;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>入门</h1>
+    <p>1.需要用到的文件：1.swiper.min.js和swiper.min.css。PS：如果页面使用了jq或zepto，可以选择更轻便的swiper.jquery.min.js</p>
+</section>
+<section>
+    <h1>例子</h1>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">slide 1</div>
+            <div class="swiper-slide">slide 2</div>
+            <div class="swiper-slide">slide 3</div>
+        </div>
+        <!-- 如果需要分离器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+</section>
+<section>
+    <h1>遇到问题</h1>
+    <p>问题1：前进后退按钮无效</p>
+    <p>原因：没有实例化swiper对象。</p>
+</section>
+<script src="swiper-3.3.1.min.js"></script>
+<script type="text/javascript">
+    /*
+    window.onload = function () {
+        console.info("d");
+        var mySwiper = new Swiper('.swiper-container',{
+            direction:'vertical',
+            loop:true,
+            //如果需要分离器
+            pagination:'.swiper-pagination',
+            //如果需要前进后退按钮
+            nextButton:'.swiper-button-new',
+            prevButton:'.swiper-button-prev',
+            //如果需要滚动条
+            scrollbar:'.swiper-scollbar'
+        });
+    }*/
+    var mySwiper = new Swiper('.swiper-container', {
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    })
+
+</script>
+</body>
+</html>

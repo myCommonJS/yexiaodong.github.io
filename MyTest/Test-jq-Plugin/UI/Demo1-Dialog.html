@@ -14,6 +14,14 @@
         function clickDialog() {
             $( "#dialog" ).dialog();
         }
+        $(document).ready(function () {
+            $(".jr_ordertype").find("span").each{
+                $(this).attr("onclick","orderType(this)")
+            }
+        })
+        function orderType(clickOrder) {
+            clickOrder.attr("style","border:1px;")
+        }
     </script>
 </head>
 <body>

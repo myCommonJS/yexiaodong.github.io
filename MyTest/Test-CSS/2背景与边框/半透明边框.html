@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>半透明边框</title>
+	</head>
+	<style>
+		img{
+			width: 500px;
+			height: 500px;
+		}
+		.test_border{
+			position:absolute;
+			padding: 20px;
+			top:20px;
+			left: 20px;
+			background-color:#FFFFFF;
+			border:20px solid hsla(0,0%,100%,.5);
+			font-size:24px;
+			font-weight: 700;
+		}
+		.border{
+			top:150px;
+			left: 20px;
+			background-clip:border-box;/*主要属性*/
+		}
+		.padding{
+			top:270px;
+			left: 20px;
+			background-clip:padding-box;/*主要属性*/
+		}
+		.content{
+			top:400px;
+			left: 20px;
+			background-clip:content-box;/*主要属性*/
+		}
+		.analysis{
+			display: inline-block;
+			margin-left: 10px;
+			vertical-align:top;
+		}
+	</style>
+	<body>
+		<img src="../../Images/stone-art.jpg"/>
+		<div class="test_border">
+			不设置background-clip
+		</div>
+		<div class="test_border border">
+			border-box
+		</div>
+		<div class="test_border padding">
+			padding-box
+		</div>
+		<div class="test_border content">
+			content-box
+		</div>
+		
+		<section class="analysis">
+			<h1>分析</h1>
+			<p>
+				1.主要属性：background-clip，规定背景的绘制区域。其值如下
+				<ul>
+					<li>border-box，背景被裁减到边框盒</li>
+					<li>padding-box，背景被裁减到内边距盒</li>
+					<li>content-box,背景被裁减到内容框</li>
+				</ul>
+			</p>
+			<p>
+				2.未知扩展：hsla(H,S,L,A)，颜色值HSLA表示方式，其参数如下
+				<ul>
+					<li>H:Hue,色调。0（或360）表示红色，120表示绿色，240表示蓝色。取值：0~360</li>
+					<li>S:Saturation，饱和度。取值0.0%~100.0%</li>
+					<li>L:Lightness,亮度。取值0.0%~100.0%</li>
+					<li>A:Alpha,透明度。取值0~1</li>
+				</ul>
+			</p>
+		</section>
+	</body>
+</html>

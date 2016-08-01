@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <title>My97日期控件</title>
     <script src="WdatePicker.js"></script>
-
+    <script type="text/javascript">
+        function US_GetSchedule() {
+            console.info("dd");
+        }
+        function gw() {
+            console.info("gw");
+        }
+    </script>
 </head>
 <body>
-一般：<input class="Wdate" type="text" id="d15" onFocus="WdatePicker({isShowClear:false,readOnly:true})"/>
+<strong>一般：</strong>
+<input class="Wdate" type="text" id="d15" onFocus="WdatePicker({isShowClear:false,readOnly:true})"/>
+<strong>月份：</strong><input type="text" class="Wdate" id="d413" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
+<strong>时间设置：</strong><input type="text" class="Wdate" id="d413" onclick="WdatePicker({dateFmt:'HH:mm',quickSel:['08:30','09:00','09:30','10:00','10:30']})"/>
 <br><br>
-月份：<input type="text" class="Wdate" id="d413" onclick="WdatePicker({dateFmt:'yyyy-MM'})"/>
-时间设置：<input type="text" class="Wdate" id="d413" onclick="WdatePicker({dateFmt:'HH:mm',quickSel:['08:30','09:00','09:30','10:00','10:30']})"/>
+东莞移动-问题无法选择“00：00”：<input type="text" onblur="CheckShiftTime(6);"
+                          name="shiftTime" id="shift_6" value=""
+                          onclick="WdatePicker({ dateFmt: 'HH:mm', quickSel: ['22:00', '22:30', '23:00', '23:30', '00:00'] })">
 <br><br>
-东莞移动-问题无法选择“00：00”：<input type="text" onblur="CheckShiftTime(6);" name="shiftTime" id="shift_6" value="" onclick="WdatePicker({ dateFmt: 'HH:mm', quickSel: ['22:00', '22:30', '23:00', '23:30', '00:00'] })">
+<strong>事件1-有问题：</strong>
+<input type="text" class="TextBox Wdate" id="queryDate" maxlength="20" data-value="queryDateMonth"
+       value="2016-07" onfocus="WdatePicker({ changed: US_GetSchedule(), dateFmt: 'yyyy-MM' })">
+<strong>事件1-官网：</strong>
+<input type="text" id="5421" onFocus="WdatePicker({changed:function(dp){US_GetSchedule();}})" class="Wdate"/>
+
+
+
 <h1>分析</h1>
     设置了时间格式为{dateFmt:'yyyy-M'}就可以使其变成月选择，其中'yyyy-M'可以变为'yyyy年M月',<br>
     其判断根据y、M 这两个字母，其他的格式是显示在文本框中的格式。<br>

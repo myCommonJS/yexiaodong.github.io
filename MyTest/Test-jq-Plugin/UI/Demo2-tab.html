@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>东莞项目-测试窗口多开</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#tabs").tabs();
+            $(".test").each(function () {
+                $(".result").append($(this));
+            });
+        });
+        function test() {
+            $(".test").each(function () {
+                console.info($(this));
+            });
+        }
+        function test2() {
+            $(".result").each(function () {
+                $("#tIframe").append($(this));
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">Nunc tincidunt</a></li>
+        <li><a href="#tabs-2">Proin dolor</a></li>
+        <li><a href="#tabs-3">Aenean lacinia</a></li>
+    </ul>
+    <div id="tabs-1">
+        tabs-1
+        <p class="test">tabs-1</p>
+    </div>
+    <div id="tabs-2">
+        <iframe id="tIframe">
+            tabs-2
+            <p class="test">tabs-2</p>
+        </iframe>
+    </div>
+    <div id="tabs-3阅读">
+        <button onclick="test()">dd</button>
+        tabs-3
+        <p class="test">tabs-3</p>
+    </div>
+
+</div>
+<button onclick="test2()">测试iframe赋值，使用html()</button>
+<h1>结果</h1>
+<div class="result"></div>
+<h1>测试结论</h1>
+1.父窗口获取不到iframe元素。
+2.tab的内容id必须是“tabs-XXX”，否则不会隐藏。
+</body>
+</html>

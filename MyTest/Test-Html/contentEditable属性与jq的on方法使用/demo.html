@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5的contentEditable属性与jq的on方法使用</title>
+    <script src="../../Scripts/jquery-1.11.3.js"></script>
+    <script src="editor.js"></script>
+
+</head>
+<body>
+<h2>简单编辑器</h2><hr>
+<div id = "editor">
+    <button id = "bold"><b>加粗</b></button>
+    <button id = "italic"><i>斜体</i></button>
+    <button id = "underline"><u>下划线</u></button>
+    <div contenteditable="true">
+        这里面<b>已经</b>有<l>一些</l><u>富文本</u>了
+    </div>
+</div>
+<script type="text/javascript">
+    new Editor('#editor');
+</script>
+</body>
+</html>

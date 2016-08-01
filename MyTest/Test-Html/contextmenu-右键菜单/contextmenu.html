@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右键菜单</title>
+    <script type="text/javascript">
+        function newFile() {
+            console.info("单击新建...");
+        }
+        function saveFile() {
+            console.info("单击保存...");
+        }
+    </script>
+</head>
+<body>
+<menu type="toolbar">
+    <li>
+        <menu label="File">
+            <button onclick="newFile()">新建...</button>
+            <button onclick="saveFile()">保存...</button>
+        </menu>
+    </li>
+    <li>
+        <menu label="Edit">
+            <button onclick="newFile()">剪切...</button>
+            <button onclick="saveFile()">复制...</button>
+            <button onclick="saveFile()">粘贴...</button>
+        </menu>
+    </li>
+</menu>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单击事件与双击事件</title>
+    <script type="text/javascript">
+        function tclick() {
+            console.info("单击蓝色事件");
+        }
+        function dblclick() {
+            console.info("双击红色事件");
+        }
+        function tclickRed() {
+            console.info("红色事件");
+            window.event? window.event.cancelBubble = true : e.stopPropagation();
+        }
+    </script>
+</head>
+<body>
+<div style="background-color:#7ac1ee; width: 200px;height: 200px;" onclick="tclick()">
+    <div style="background-color:#ee2c35; width: 50px;height: 50px;" ondblclick="dblclick()" onclick="tclickRed()">
+    </div>
+</div>
+</body>
+</html>
