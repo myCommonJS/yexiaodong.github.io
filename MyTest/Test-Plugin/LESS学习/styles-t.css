@@ -1,0 +1,18 @@
+/* line 2, C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\LESS学习\styles.less */
+.border {
+  border: 1px solid #CCCCCC;
+}
+/* line 5, C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\LESS学习\styles.less */
+#header {
+  color: red;
+}
+/* line 8, C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\LESS学习\styles.less */
+h2 {
+  color: red;
+}
+/* line 11, C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\LESS学习\styles.less */
+div {
+  border: 1px solid #CCCCCC;
+  width: 100px;
+  height: 100px;
+}

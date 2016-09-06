@@ -1,0 +1,91 @@
+@charset "UTF-8";
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 13px;
+  font-family: '微软雅黑 Regular', '微软雅黑'; }
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer; }
+
+.btn-blue {
+  background-color: #4A77CE;
+  color: #FFFFFF; }
+
+.btn-blue:hover {
+  background-color: #63ad28; }
+
+.btn-lg {
+  width: 240px;
+  height: 40px;
+  line-height: 40px; }
+
+.page .btn {
+  margin-right: 10px;
+  padding: 5px 15px;
+  border: 1px solid #000000;
+  background-color: #ffffff; }
+.page .btn-not {
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC; }
+.page .btn-now {
+  border-color: #0000FF;
+  color: #0000FF; }
+.page .btn-prev::before {
+  content: "<";
+  margin-right: 5px; }
+.page .btn-next::after {
+  content: ">";
+  margin-left: 5px; }
+
+.sharpPages a:first-of-type,
+.sharpPages a:last-of-type,
+.sharpPages div {
+  display: none; }
+.sharpPages a
+, .sharpPages span {
+  margin-right: 10px;
+  padding: 5px 15px;
+  border: 1px solid #000000;
+  background-color: #ffffff; }
+.sharpPages .cpb {
+  border-color: #0000FF;
+  color: #0000FF; }
+.sharpPages a:nth-child(2)::before {
+  content: "<";
+  margin-right: 5px; }
+.sharpPages a:nth-last-of-type(2)::after {
+  content: ">";
+  margin-left: 5px; }
+
+.center {
+  position: relative;
+  width: 1020px;
+  margin: 0 auto;
+  font-size: 0px; }
+  .center .container {
+    display: inline-block;
+    width: 730px;
+    font-size: 13px; }
+  .center .right-sidebar {
+    float: right;
+    width: 268px;
+    overflow: visible;
+    font-size: 13px; }
+  .center .tab-list {
+    float: left;
+    width: 170px;
+    font-size: 13px; }
+  .center .content-panel {
+    margin-left: 187px;
+    min-height: 150px;
+    font-size: 13px; }
+
+/*# sourceMappingURL=global.css.map */

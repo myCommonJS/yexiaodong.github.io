@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>插入换行</title>
+	</head>
+	<style>
+		.right{
+			position: absolute;
+			top:0px;
+			right:0px;
+		}
+		h1{
+			margin:0px;
+		}
+		.expect dt{
+			display: inline;
+		}
+		.expect dd{
+			display: inline;
+			margin:0;
+			font-weight:bold;
+		}
+		.expect dd::after{
+			content: "\A";
+			white-space: pre;
+		}
+	</style>
+	<body>
+		<!-- 定义列表原始样式 -->
+		<section class="section1">
+			<h1>定义列表原始样式</h1>
+			<dl>
+				<dt>name:</dt>
+				<dd>Ye Xiaodong</dd>
+				
+				<dt>Email:</dt>
+				<dd>2283138757@qq.com</dd>
+				
+				<dt>Location:</dt>
+				<dd>Earth</dd>
+			</dl>
+		</section>
+		<!-- 期待样式 -->
+		<section class="expect">
+			<h1>期待样式</h1>
+			<dl>
+				<dt>name:</dt>
+				<dd>Ye Xiaodong</dd>
+				
+				<dt>Email:</dt>
+				<dd>2283138757@qq.com</dd>
+				
+				<dt>Location:</dt>
+				<dd>Earth</dd>
+			</dl>
+		</section>
+		
+		<!-- 分析  -->
+		<section class="right">
+			<h1>分析</h1>
+			<ul>
+				<li>"\A"：有一个Unicode字符专门代表换行符号：0x000A，在css中这个字符可以写作“\000A"，或简化为"\A"。</li>
+				<li>因为默认的情况下换行符会与相邻的其他空白符进行合并。所以用到white-space:pre</li>
+			</ul>
+		</section>
+	</body>
+</html>

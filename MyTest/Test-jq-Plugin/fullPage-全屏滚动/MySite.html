@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Seaton</title>
+		<link rel="stylesheet" href="jquery.fullPage.css">
+		<script src="../../Scripts/jquery-1.11.3.js"></script>
+		<script src="jquery.fullPage.js"></script>
+		<style>
+			body,html,header,section,div,ul,li,a{padding: 0;margin: 0;}
+			li{ list-style:none;}
+			a{ text-decoration:none;}
+		</style>
+	</head>
+	<body>
+		<div class="con">
+			<section class="section s1">第一页</section>
+			<section class="section s2">第二页</section>
+			<section class="section s3">第三页</section>
+			<section class="section s4">第四页</section>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".con").fullpage({
+					sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90']
+				});
+			});
+		</script>
+	</body>
+</html>

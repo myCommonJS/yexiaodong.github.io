@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>平行四边形</title>
+		<style>
+			/* 嵌套元素方案 */
+			.button{
+				display: inline-block;
+				margin:.5em;
+				padding: .5em 1em;
+				border:0;
+				background:#58a;
+				color:white;
+				text-transform: uppercase;
+				text-decoration: none;
+				font:blod 200%/1 sans-serif;
+			}
+			.button{ transform: skewX(45deg); }
+			.button > div{ transform:skewX(-45deg); }
+			
+			/* 伪元素方案 */
+			.button2{
+				position:relative;
+				display: inline-block;
+				margin:.5em;
+				padding: .5em 1em;
+				border:0;
+				background:transparent;
+				color:white;
+				text-transform: uppercase;
+				text-decoration: none;
+				font:blod 200%/1 sans-serif;
+			}
+			.button2::before{
+				content: '';/* 用伪元素来生成一个矩形 */
+				position:absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left: 0;
+				z-index: -1;
+				background:#58a;
+				transform: skew(45deg);
+			}
+			
+			/* 页面样式 */
+			aside{
+				position:absolute;
+				right:300px;
+				top:0px;
+			}
+			h3,p{
+				margin:0px;
+			}
+			p{
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>方案1</h1>
+			<a href="#" class="button">
+				<span>嵌套元素方案，文字<b style="color:red">没有</b>被拉伸回来</span>
+			</a>
+			<button class="button">
+				<div>嵌套元素方案，文字被拉伸回来</div>
+			</button>
+		</section>
+		
+		<section>
+			<h1>方案2</h1>
+			<a href="#" class="button2">
+				<div>伪元素方案</div>
+			</a>
+			<button class="button2">
+				<div>伪元素方案</div>
+			</button>
+		</section>
+		
+		<aside>
+			<h1>分析</h1>
+			<h3>方案1</h3>
+			<p>
+				<strong>原理：</strong>将矩形拉伸，再讲矩形里的内容反向拉伸<br>
+				<strong>缺点：</strong>添加额外元素。
+			</p>
+			<h3>方案1</h3>
+			<p>
+				<strong>原理：</strong>用伪元素来生成矩形<br>
+				<strong>缺点：</strong>
+			</p>
+			<h3>额外知识</h3>
+			<p>
+				<strong>原理：</strong>用伪元素来生成矩形<br>
+				<strong>text-transform：</strong>控制文本的大小写
+			</p>
+		</aside>
+	</body>
+</html>

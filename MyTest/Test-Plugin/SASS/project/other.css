@@ -1,0 +1,19 @@
+/*
+ * 该样式文件的样式只为调整demo页面，可以忽略
+ */
+.default,
+.page,
+.sharpPages{
+	margin:20px;
+}
+.center{
+	margin-bottom: 10px;
+}
+.container,.tab-list{
+	height: 100px;
+	background-color:aqua;
+}
+.right-sidebar,.content-panel{
+	height: 50px;
+	background-color:royalblue;
+}

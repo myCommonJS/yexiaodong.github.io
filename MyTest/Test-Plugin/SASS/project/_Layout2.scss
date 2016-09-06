@@ -1,0 +1,31 @@
+//文件描述：布局-浮动-不建议使用
+//问题1：不建议使用浮动布局，因为会导致布局塌陷、页面没撑开等问题，所以需要清除浮动
+//问题2：即使清除了浮动，也会产生影响————上下模块边距不好设置
+//需要根据实际项目修改部分属性
+//-----------------------------------------------
+.center {
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    clear: both; //清除浮动
+    
+    //左右-浮动
+    .container {
+        width: 730px;
+        float: left;
+    }
+    .right-sidebar {
+        float: right;
+        width: 268px;
+        overflow: visible;
+    }
+    
+    .tab-list {
+        float: left;
+        width: 170px;
+    }
+    .content-panel {
+        margin-left: 187px;
+        min-height: 100px;
+    }
+}

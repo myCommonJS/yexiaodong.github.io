@@ -1,0 +1,36 @@
+//文件描述：布局
+//需要根据实际项目修改部分属性
+//-----------------------------------------------
+.center {
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    font-size: 0px;//必须设置，否则会出现意想不到的样式问题。
+    //主要内容-左
+    //左侧设置了inlin-block，右侧设置了浮动
+    //-----------------------------------------------
+    .container {
+        display: inline-block;
+        width: 730px;
+        font-size: 13px;
+    }
+    .right-sidebar {
+        float: right;
+        width: 268px;
+        overflow: visible;
+        font-size: 13px;
+    }
+    //主要内容-右
+    //左侧设置了浮动，右侧设置了block
+    //-----------------------------------------------
+    .tab-list {
+        float: left;
+        width: 170px;
+        font-size: 13px;
+    }
+    .content-panel {
+        margin-left: 187px;
+        min-height: 150px; //为了撑开页面
+        font-size: 13px;
+    }
+}

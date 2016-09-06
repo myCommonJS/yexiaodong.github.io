@@ -1,6 +1,14 @@
+.border {
+  border: 1px solid #CCCCCC;
+}
 #header {
-  color: #CCCCCC;
+  color: red;
 }
 h2 {
-  color: #CCCCCC;
+  color: red;
+}
+div {
+  border: 1px solid #CCCCCC;
+  width: 100px;
+  height: 100px;
 }

@@ -1,0 +1,81 @@
+//作用：设置文字、背景颜色
+//需要根据实际项目修改部分属性
+//lg：大；sm：小；xm：超小
+//-----------------------------------------------
+.btn{
+    display: inline-block;
+    text-align:center;
+    cursor:pointer;
+}
+.btn-blue {
+    background-color: #4A77CE;
+    color: #FFFFFF;
+}
+.btn-blue:hover {
+    background-color: #63ad28;
+}
+.btn-lg{
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+}
+
+//模块-页码
+//btn：默认
+//btn-not：不可选
+//btn-now：当前选择
+//-----------------------------------------------
+.page{
+    .btn{
+        margin-right: 10px;
+        padding: 5px 15px;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+    }
+    .btn-not{
+        border: 1px solid #CCCCCC;
+        color: #CCCCCC;
+    }
+    .btn-now{
+        border-color: #0000FF;
+        color: #0000FF;
+    }
+    .btn-prev::before{
+        content: "<";
+        margin-right: 5px;
+    }
+    .btn-next::after{
+        content: ">";
+        margin-left: 5px;
+    }
+}
+
+
+//模块-页码-丰德
+//-----------------------------------------------
+.sharpPages{
+    a:first-of-type,
+    a:last-of-type,
+    div{
+        display: none;
+    }
+    a
+    ,span{
+        margin-right: 10px;
+        padding: 5px 15px;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+    }
+    .cpb{
+        border-color: #0000FF;
+        color: #0000FF;
+    }
+    a:nth-child(2)::before{
+        content: "<";
+        margin-right: 5px;
+    }
+    a:nth-last-of-type(2)::after{
+        content: ">";
+        margin-left: 5px;
+    }
+}

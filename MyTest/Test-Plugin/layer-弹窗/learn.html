@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学习layer</title>
+		<script src="../../Scripts/jquery-1.11.3.js"></script>
+		<script src="layer/layer.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//提示
+				$('#test').on('click',function(){
+					layer.msg('Hello Layer');
+				});
+				//页面层
+				$('#test2').on('click',function(){
+					layer.open({
+						type:1,
+						area:['600px','360px'],
+						shadeClose:true,//点击遮罩关闭
+						content:'<div style="padding:20px;">自定义内容<span style="color:red">红</span></div>'
+					});
+				});
+				//iframe层
+				$('#test3').on('click',function(){
+					layer.open({
+						type:2,
+						title:'iframe父子操作',
+						maxmin:true,
+						area:['600px','360px'],
+						shadeClose:true,//点击遮罩关闭
+						content:'http://layer.layui.com/hello.html'
+					});
+				});
+				//loading层
+				$('#test4').on('click',function(){
+					var ii = layer.load();
+					//此处用setTimeout演示ajax的回调
+					setTimeout(function(){
+						layer.close(ii);
+					},1000);
+				});
+				//tips层
+				$('#test5').on('click',function(){
+					layer.tips('Hellop tips!','#test5');
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<section>
+			<h1>提示</h1>
+			<ul>
+				<li>必须先引入jq1.8或以上版本</li>
+				<li>layer文件夹内容不可变动</li>
+			</ul>
+			<button id="test">提示自动消失-msg</button><br><br>
+			<button id="test2">弹出一个页面层-opne</button><br><br>
+			<button id="test3">弹出一个iframe层-opne</button><br><br>
+			<button id="test4">弹出一个loading层-load</button><br><br>
+			<button id="test5">弹出一个tips层-tips</button><br>
+		</section>
+	</body>
+</html>
