@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>样式文本框插件</title>
+		<script type="text/javascript" src="../../Scripts/jquery-1.8.3.min.js" ></script>
+		<script src="jquery.colorpicker.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#txtColor").colorpicker({
+            		fillcolor:true,
+            		success: function (o, color) {
+            			$(o).css("background-color", color);
+            			$("#txtColor").val(color);
+        			},
+        			reset:function(o){
+        				$(o).css("background-color", '');
+            			$("#txtColor").val('');
+    				}
+        		});
+        		
+        		//鼠标离开背景颜色选择面板事件
+        		$("#colorpanel").mouseout(function (e) {
+        			console.log($("#txtColor").val());
+            		$("#re").html($("#txtColor").val());
+        		});
+			});
+
+        	function btn(){
+        		var value = $("#txtColor").val();
+        		$("#re").html(value);
+        		console.log("btn="+value);
+        	}
+		</script>
+	</head>
+	<body>
+		<input id="txtColor" type="text" name="color" value="">
+		
+		值：<span id="re"></span>
+		
+		<button id="btn" onclick="btn();">测试</button>
+		<h1>测试目的</h1>
+		清除时，文本框颜色没有变化？<br>
+		原因：文本框的颜色变化是通过success设置的，而清除时没有执行success方法，所以文本框颜色没变化
+		<h1>使用</h1>
+		1.导入jquery.js（不能超过1.9，原因是1.9后不支持live）<br>
+		2.导入jquery.colorpicker.js<br>
+		3.在页面加载方法中添加
+		<pre>
+			$("#txtColor").colorpicker({
+            		fillcolor:true,
+            		success: function (o, color) {
+            			$(o).css("background-color", color);
+            			$("#txtColor").val(color);
+        			},
+        			reset:function(o){
+        				$(o).css("background-color", color);
+            			$("#txtColor").val(color);
+    				}
+        		});
+		</pre>
+		插件来源：https://www.iplaybus.com/colorpicker.html
+	</body>
+</html>

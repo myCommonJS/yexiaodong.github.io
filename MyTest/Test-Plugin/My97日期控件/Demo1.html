@@ -37,5 +37,12 @@
     M：表示月份可以未一位数，如“2016-3”<br>
     MM：表示月份必须为两位数，如“2016-03”<br>
 quickSel：设置快速选择。
+
+<h1>设置开始时间</h1>
+测试1-设置开始时间：<input class="Wdate" type="text" onFocus="WdatePicker({startDate:'2016-09-22'})"/>
+<br><br>
+测试2-设置不合法日期（可选择日期段）：
+<input class="Wdate" type="text" onFocus="WdatePicker({dateFmt: 'yyyy-MM' ,errDealMode:1,minDate:'2016-09-22'})"/><br>
+
 </body>
 </html>

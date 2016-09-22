@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>input的button</title>
+	</head>
+	<body>
+		<h1>input的button设置了disabled属性能否触发onclick事件</h1>
+		<input type="button" onclick="alert('d');" value="测试-不加disabled"/>
+		<input type="button" disabled="true" onclick="alert('d');" value="测试-disabled为true"/>
+		<input type="button" disabled="disabled" onclick="alert('d');" value="测试-disabled为disabled"/>
+		
+		<sesion>
+			<h1>分析</h1>
+			<ul>
+				<li>1.disabled设置为true或disabled都可以禁用按钮</li>
+				<li>2.disabled可以禁用onclick</li>
+			</ul>
+		</sesion>
+	</body>
+</html>
