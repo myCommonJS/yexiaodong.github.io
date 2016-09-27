@@ -1,0 +1,3 @@
+自定义固定表头有一下两种方式
+1.复制三个table，使用js控制
+2.将table分为两个table：一个存放thead，一个存放tbody

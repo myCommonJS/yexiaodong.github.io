@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+﻿# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -12,8 +12,8 @@ email: 2283138757@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   Seaton private web site.
   Welcome to visit!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000/" # the base hostname & protocol for your site
+baseurl: ""   # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 headline: 分享 累积 进步

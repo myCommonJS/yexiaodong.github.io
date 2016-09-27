@@ -1,0 +1,21 @@
+//作用：设置文字、背景颜色
+//需要根据实际项目修改部分属性
+//lg：大；sm：小；xm：超小
+//-----------------------------------------------
+.btn{
+  display: inline-block;
+  text-align:center;
+  cursor:pointer;
+}
+.btn-yellow {
+  background-color: #FC0;
+  color: #333333;
+}
+.btn-yellow:hover {
+  background-color: #80ff48;
+}
+.btn-mg{
+  width: 98px;
+  height: 36px;
+  line-height: 36px;
+}

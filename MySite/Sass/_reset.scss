@@ -1,0 +1,31 @@
+html,
+body,
+header,
+section,
+ul,
+ol,
+div,
+p,
+h1,
+a{
+    margin:0;
+    padding:0;
+}
+body{
+    font-size: 13px;
+    color:#333;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    &:hover{
+        cursor:pointer;
+    }
+}
+h1{
+    font-size:34px;
+    font-weight:100;
+}

@@ -1,0 +1,228 @@
+//头部区域
+//-----------------------------------------------
+.hd{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+  width: 100%;
+  height: 60px;
+  background:rgba(0,0,0,.8);
+  .inner{
+    width: 980px;
+    margin:0 auto;
+  }
+  .logo{
+    float: left;
+    margin-top:16px;
+    margin-right:20px;
+  }
+  nav{
+    float:left;
+  }
+  li{
+    float:left;
+    a{
+      line-height:60px;
+      display:block;
+      padding:0 20px;
+      color:#fff;
+      &:hover{
+        background: #FC0;
+        color:rgba(0,0,0,.8);
+      }
+    }
+    &.active{
+      background: #FC0;
+      color:rgba(0,0,0,.8);
+    }
+  }
+}
+//页面区域
+//-----------------------------------------------
+.con{
+  //第一个页面
+  .s1{
+    background:url(../Images/s1.jpg) center;
+    overflow: hidden;
+    
+    //图片居中，top/left为50%，再设置margin的top、left为负的一半
+    img{
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin-top:-230px;
+      margin-left:-545px;
+      opacity: 0;
+      transition-delay: 0.8s; //定义过渡效果何时开始。
+    }
+    &.active img{
+      opacity: 1;
+    }
+  }
+  //第二个页面
+  .s2{
+    background:url(../Images/s2.jpg) center;
+    .left li{
+      transform:translateY(1000px);
+      &:nth-child(1){
+        transition-delay: 0.8s;
+      }
+      &:nth-child(2){
+        transition-delay: 1s;
+      }
+      &:nth-child(3){
+        transition-delay: 1.2s;
+      }
+    }
+    &.active .left li{
+      transform:translateY(0);
+    }
+  }
+  //第三个页面
+  .s3{
+    background:url(../Images/s3.jpg) center;
+    .left{
+      li{
+        transition-delay: 0.8s;
+        &:nth-child(1){
+          transform:translateX(0);
+        }
+        &:nth-child(2){
+          transform:translateX(-279px);
+        }
+        &:nth-child(3){
+          transform:translateX(-558px);
+        }
+      }
+    }
+    &.active .left li{
+      transform:translateX(0);
+    }
+  }
+  //第四个页面
+  .s4{
+    background:url(../Images/s4.jpg) center;
+    .left li:nth-child(1)
+    {
+      transform:translate(330px,-1000px);
+    }
+    &.active .left li:nth-child(1)
+    {
+      -webkit-animation: move1 3s 0.8s forwards;//forwards：停留在最后一针
+    }
+    .left li:nth-child(2)
+    {
+      transform:translate(330px,-1000px);
+    }
+    &.active .left li:nth-child(2)
+    {
+      -webkit-animation: move2 3s 0.8s forwards;//forwards：停留在最后一针
+    }
+    .left li:nth-child(3)
+    {
+      transform:translate(330px,-1000px);
+    }
+    &.active .left li:nth-child(3)
+    {
+      -webkit-animation: move3 3s 0.8s forwards;//forwards：停留在最后一针
+    }
+  }
+  //第五个页面
+  .s5{
+    background:url(../Images/s5.jpg) center;
+    perspective:500px ; //设置元素被查看位置的视图,css的3d效果需要
+
+    .left li{
+      transform:translate3d(-1000px,-1000px,-500px) rotateX(145deg);
+
+    }
+    .left li:nth-child(1){
+      transition-delay:0.8s;
+    }
+    .left li:nth-child(2){
+      transition-delay:1s;
+    }
+    .left li:nth-child(3){
+      transition-delay:1.2s;
+    }
+    &.active .left li{
+      transform: translate3d(0,0,0px) rotateX(0deg);
+    }
+  }
+
+}
+//公共列表
+//-----------------------------------------------
+.section{
+  height: 100%;
+  overflow: hidden;
+  .left{
+    position: absolute;
+    left:5%;
+    top:50%;
+    margin-top:-220px;
+    z-index: 2;
+
+    li{
+      float:left;
+      margin-right:20px;
+      transition:0.5s;  //过渡效果需要的时间
+    }
+
+    p{
+      margin:20px 0;
+      font-size:18px;
+      line-height: 1.5em;
+    }
+  }
+  .right{
+    position: absolute;
+    right:5%;
+    top:15%;
+    z-index: 2;
+    text-align: right;
+
+    p{
+      margin-top:20px;
+      margin-bottom:10px;
+      font-size: 18px;
+      line-height:1.5em;
+    }
+    a{
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .bg{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    z-index:1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

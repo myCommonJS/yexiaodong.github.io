@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="section-main">
+    <!-- 标签 -->
+    <div id="blog_header_tab">
+    {% for category in site.categories %}
+        <a href="#{{category|first}}" class="blog-header-tab">{{category|first}}</a>
+    {% endfor %}
+    </div>
+    <!-- 内容 -->
+    {% for category in site.categories %}
+    <a class="text-left blog-re-top" href="#blog_header_tab">返回顶部</a>
+    <h2 id="{{category|first}}">{{ category | first }}({{ category | last | size }})</h2>
+
+
+    <ul class="arc-list">
+        {% for post in category.last %}
+        <li>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="a-beautify ">
+            <img src="/css/img/sectionImg_101.PNG">
+            <div>
+                <h2 class="section-title">{{ post.title }}</h2>
+                <div class="section-content">
+                    {{ post.excerpt }}
+                </div>
+                <p>Posted by Seaton on {{ post.date | date: "%Y-%m-%d" }}</p>
+            </div>
+            <hr>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+
+</section>
+
