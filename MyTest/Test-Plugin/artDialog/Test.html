@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>弹窗是一个完整的html的影响</title>
+		<script src="../../Scripts/jquery-1.8.3.min.js"></script>
+		<script src="ArtDialog/jquery.artDialog.js?skin=blue"></script>
+		<script src="test.js"></script>
+		<script type="text/javascript">
+			//传统使用
+			function learn1() {
+				$.dialog('简单愉悦的接口，强大的表现力，优雅的内部实现',
+					function() {
+						alert('yes');
+					},
+					function() {
+						alert('cancel');
+					});
+			}
+			//字面量传参
+			function learn2() {
+				var dialog = art.dialog({
+					title: '欢迎',
+					content: '欢迎使用artDialog对话框组件！',
+					icon: 'succeed',
+					follow: document.getElementById('btn2'),
+					ok: function() {
+						this.title('警告').content('请注意artDialog两秒后将关闭！').lock().time(2);
+						return false;
+					}
+				});
+			}
+			//测试
+			var d = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>js方法名-IE兼容测试</title><script src='../../Scripts/jquery-1.8.3.min.js'/></head><body>测试</body></html>";
+			var dd = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>js方法名-IE兼容测试</title></head><body>测试</body></html>";
+			
+			function test1(){
+				$.dialog({
+					id:'test',
+					title: '测试',
+					content: d
+				});
+			}
+			function test2(){
+				art.dialog({
+					id:'test',
+					title: '测试',
+					content: d
+				});
+			}
+			function test4(){
+				$.dialog({
+					id:'test',
+					title: '测试',
+					content: dd
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--传统使用-->
+		<section>
+			<h1>传统使用</h1>
+			<button onclick="learn1()">学习1-传统使用</button> 参数如下：
+			<ul>
+				<li>1.弹窗显示内容</li>
+				<li>2.确认后执行的方法</li>
+				<li>3.取消后执行的方法</li>
+			</ul>
+		</section>
+		<!--字面量传参（即配置参数）-->
+		<section>
+			<h1>字面量传参（即配置参数）</h1>
+			<button onclick="learn2()">学习1-传统使用</button>
+			常用参数：
+			<ul>
+				<li>id：弹框ID，作用是防止多次点击按钮，打开多个窗口。即ID相同的窗口只能打开一个</li>
+				<li>title:弹框标题名称</li>
+				<li>content：弹框内容</li>
+				<li><a href="http://lab.seaning.com/_doc/API.html#options" target="_blank">更多参数</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>测试原因</h1>
+			<button onclick="test1()">测试-jq（$）</button>
+			<button onclick="test2()">测试-非jq(art)</button>
+			<button onclick="test3()">测试-测试外链js方法是否失效</button>
+			<button onclick="test4()">测试-jq（$）-除去外部js</button>
+			<p>
+				东莞移动项目中，完整的弹窗导致ArtDialog的jq方式无法使用，<br> 但在使用传统方法可以正常使用
+			</p>
+			<b>结论</b>
+			<i>
+				弹窗不可使用完整的html标签，否则会导致ArtDialog插件的jq方法失效。<br>
+				原因是head中使用script引用外部js文件
+			</i>
+			<i></i>
+		</section>
+	</body>
+
+</html>

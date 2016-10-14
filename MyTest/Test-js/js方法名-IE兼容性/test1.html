@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js方法名-IE兼容测试</title>
+		<script type="text/javascript">
+			function test_1(){
+				alert("c");
+			}
+			function Captcha(param){
+				alert(param);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="test_1()">调用方法test_1</button>
+		<a href="javascript:Captcha('img_AdminCode');">刷新</a>
+		<section>
+			<h1>测试1</h1>
+			<p>js的方法名带有“_”（下划线），如test_1</p>
+			<b>结果：可以调用</b>
+		</section>
+		
+		<section>
+			<h1>测试2</h1>
+			<p>js方法的参数带有“_”（下划线），如img_AdminCode</p>
+			<b>结果：可以调用</b>
+		</section>
+	</body>
+</html>

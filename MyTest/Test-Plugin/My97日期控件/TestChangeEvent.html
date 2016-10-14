@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>控件值变更事件的触发</title>
+		<script src="../../Scripts/jquery-1.8.3.min.js"></script>
+		<script src="WdatePicker.js"></script>
+		<script type="text/javascript">
+			function GetSchedule(){
+				var time = $("#SDS_queryDate").val();
+				console.log('触发onchange：val()='+ time);
+			}
+			function GetSchedule2(){
+				var time = $("#SDS_queryDate").val();
+				var newTime = $dp.cal.newdate.y + "-" + $dp.cal.newdate.M;
+				alert('触发onchange：val()='+ time + "$dp.cal=" + newTime);
+			}
+		</script>
+	</head>
+	<body>
+		<section>
+			onchange：
+			<input type="text" class="TextBox Wdate" id="SDS_queryDate" 
+				maxlength="20" data-value="queryDateMonth" value="2016-10" 
+				onclick="WdatePicker({ dateFmt: 'yyyy-MM' })" onchange="GetSchedule()"><br><br>
+			插件建议使用的方法：
+			<input type="text" class="TextBox Wdate" id="SDS_queryDate" 
+				maxlength="20" data-value="queryDateMonth" value="2016-10" 
+				onclick="WdatePicker({ dateFmt: 'yyyy-MM',Mchanging:GetSchedule2 })"><br><br>
+			<h1>测试原因</h1>
+			<p>在东莞移动项目中，控件的值改变后无法触发change事件，需要光标离开控件查触发</p>
+			<b>原因</b>
+			<ul>
+				<li>1.使用onchange事件触发，而不是控件提供的方法</li>
+				<li>2.使用控件的方法时，注意——val()获取到的是之前的值，而不是新的值。</li>
+				<li>3.获取新值通过对象$dp.cal.newdate</li>
+				<li>y：年、M：月、d：日、H:小时</li>
+			</ul>
+		</section>
+	</body>
+</html>

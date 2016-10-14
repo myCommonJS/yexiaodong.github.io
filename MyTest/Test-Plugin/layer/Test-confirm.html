@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../Scripts/jquery-1.8.3.min.js"></script>
+		<script src="layer/layer.js"></script>
+		<script type="text/javascript">
+			//注册成功
+			function succ() {
+				layer.confirm('您是如何看待前端开发？', {
+					btn: ['重要'] //按钮
+				}, function() {
+					window.location.href = "learn.html";
+				});
+			}
+
+			function succ2() {
+				layer.confirm('您是如何看待前端开发？', {
+					btn: ['重要', '奇葩'] //按钮
+				}, function() {
+					layer.msg('的确很重要', {
+						icon: 1
+					});
+				}, function() {
+					layer.msg('也可以这样', {
+						time: 20000, //20s后自动关闭
+						btn: ['明白了', '知道了']
+					});
+				});
+			}
+		</script>
+	</head>
+	<body>
+		
+		<button onclick="succ();">一个按钮</button>
+		<button onclick="succ2();">两个按钮</button>
+	</body>
+</html>
