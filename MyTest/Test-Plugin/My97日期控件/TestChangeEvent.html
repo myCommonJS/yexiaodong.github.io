@@ -11,22 +11,23 @@
 				console.log('触发onchange：val()='+ time);
 			}
 			function GetSchedule2(){
-				var time = $("#SDS_queryDate").val();
+				var time = $("#SDS_queryDate2").val();
 				var newTime = $dp.cal.newdate.y + "-" + $dp.cal.newdate.M;
-				alert('触发onchange：val()='+ time + "$dp.cal=" + newTime);
+				$("#SDS_queryDate2").val(newTime);
+				alert('触发onchange：val()='+ $("#SDS_queryDate2").val() + ",$dp.cal=" + newTime);
 			}
 		</script>
 	</head>
 	<body>
 		<section>
-			onchange：
+			东莞项目使用（有缺陷）-onchange：
 			<input type="text" class="TextBox Wdate" id="SDS_queryDate" 
 				maxlength="20" data-value="queryDateMonth" value="2016-10" 
 				onclick="WdatePicker({ dateFmt: 'yyyy-MM' })" onchange="GetSchedule()"><br><br>
 			插件建议使用的方法：
-			<input type="text" class="TextBox Wdate" id="SDS_queryDate" 
+			<input type="text" class="TextBox Wdate" id="SDS_queryDate2" 
 				maxlength="20" data-value="queryDateMonth" value="2016-10" 
-				onclick="WdatePicker({ dateFmt: 'yyyy-MM',Mchanging:GetSchedule2 })"><br><br>
+				onclick="WdatePicker({ dateFmt: 'yyyy-MM',Mchanged:GetSchedule2 })"><br><br>
 			<h1>测试原因</h1>
 			<p>在东莞移动项目中，控件的值改变后无法触发change事件，需要光标离开控件查触发</p>
 			<b>原因</b>

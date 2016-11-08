@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+                 ul,li{padding: 0;margin: 0;list-style: none; }
+                 li{ background:#fed22f;width: 80px;text-align: center;height: 25px;line-height: 25px;border-bottom: 1px #fff solid}
+                 #show li ul{ /*display:none;*/ display:block;}
+                 #show:hover li ul{ display:block;}
+                #hide{ position: absolute;z-index: 10000; top:0;left:0;}
+    </style>
+</head>
+<body>
+<div style="width: 100%;height: 100px; background: #a00000; padding-top: 1px;">
+         <div style=" height: 26px; width: 100px; position: relative; border: 2px #fa8072 solid; margin: 40px 0 0 100px ; z-index:10001">
+             <ul id="show">
+               <li>
+                   <ul id="hide">
+                       <li>TEST</li>
+                      <li>TEST</li>
+                       <li>TEST</li>
+                       <li>TEST</li>
+                       <li>TEST</li>
+
+                   </ul>
+               </li>
+             </ul>
+         </div>
+ </div>
+ <div style=" width: 100%;height: 400px; background: #222; position:absolute; z-index: 1000;"></div>
+</body>
+</html>

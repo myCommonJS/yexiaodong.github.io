@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定表格宽度</title>
+    <style>
+        table{
+            margin:10px;
+        }
+        .div-table{
+            width: 960px;
+        }
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery.seaton.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            /* 完整参数 */
+            $("#tableId1").tableFixWidth({
+                'column':'1',
+                'width':'100px',
+                'tableWidth':'300px'
+            });
+
+            /* 缺少参数 */
+            $("#tableId2").tableFixWidth({
+                'column':'1',
+                'width':'100px'
+            });
+
+            /* 无参数 */
+            $("#tableId3").tableFixWidth();
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <h1>需求</h1>
+        1.固定列宽
+        2.内容不换行，超出隐藏，并显示“...”
+    </section>
+    <div class="div-table">
+        <!-- 表格 -->
+        <table id="tableId1" border="1">
+            <tr>
+                <th>运营商名称</th>
+                <th>订单量</th>
+                <th>订单评价量</th>
+                <th>投诉量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心东莞市虎门社区服务中心东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+        </table>
+        <!-- 表格 -->
+        <table id="tableId2" border="1">
+            <tr>
+                <th>运营商名称</th>
+                <th>订单量</th>
+                <th>订单评价量</th>
+                <th>投诉量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心东莞市虎门社区服务中心东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+        </table>
+        <!-- 表格 -->
+        <table id="tableId3" border="1">
+            <tr>
+                <th>运营商名称</th>
+                <th>订单量</th>
+                <th>订单评价量</th>
+                <th>投诉量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心东莞市虎门社区服务中心东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>东莞市虎门社区服务中心</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>详情</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

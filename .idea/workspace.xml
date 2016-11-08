@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82e5ff78-e3ae-42e0-b1e1-14371b300d74" name="Default" comment="测试样例">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/Blog1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/Blog2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/Blog3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/Project1.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyPlugin/1-TableFixWidth.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyPlugin/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyPlugin/jquery.seaton.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTest/Test-AngularJS/learn2-validate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTest/Test-AngularJS/learn2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyTest/Test-兼容性/IE7-z-index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyTest/Test-Html/Table/成功-固定表头-分表法.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/Blog1.png" afterPath="$PROJECT_DIR$/Images/Blog1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/Blog2.png" afterPath="$PROJECT_DIR$/Images/Blog2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/Blog3.png" afterPath="$PROJECT_DIR$/Images/Blog3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/img4.png" afterPath="$PROJECT_DIR$/Images/img4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Images/img5.png" afterPath="$PROJECT_DIR$/Images/img5.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyTest/Test-Plugin/My97日期控件/TestChangeEvent.html" afterPath="$PROJECT_DIR$/MyTest/Test-Plugin/My97日期控件/TestChangeEvent.html" />
     </list>
     <ignored path="yexiaodong.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,16 +36,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="learn2-validate.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyTest/Test-AngularJS/learn2-validate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            <state relative-caret-position="243">
+              <caret line="128" column="11" selection-start-line="128" selection-start-column="11" selection-end-line="135" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="learn2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTest/Test-AngularJS/learn2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="41" column="6" selection-start-line="23" selection-start-column="0" selection-end-line="41" selection-end-column="6" />
               <folding>
-                <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,11 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MyTest/Test-CSS/外边距折叠-margin/Demo1.html" />
-        <option value="$PROJECT_DIR$/MyTest/Test-CSS/外边距折叠-margin/Demo2.html" />
-        <option value="$PROJECT_DIR$/MyTest/Test-表单/DemoFrom.css" />
-        <option value="$PROJECT_DIR$/MyTest/Test-表单/DemoFrom.html" />
-        <option value="$PROJECT_DIR$/MyTest/Test-CSS/常规流-清除浮动/demo1.html" />
         <option value="$PROJECT_DIR$/MyTest/Test-CSS/浮动/Demo1-浮动.html" />
         <option value="$PROJECT_DIR$/MyTest/Test-CSS/布局/demo1.html" />
         <option value="$PROJECT_DIR$/MyTest/Test-CSS/布局/demo1.css" />
@@ -111,6 +121,11 @@
         <option value="$PROJECT_DIR$/MyTest/Test-js/js方法中的return/each-Return.html" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/MyPlugin/1-TableFixWidth.html" />
+        <option value="$PROJECT_DIR$/MyPlugin/jquery.seaton.js" />
+        <option value="$PROJECT_DIR$/MyTest/Test-兼容性/IE7-z-index.html" />
+        <option value="$PROJECT_DIR$/MyTest/Test-AngularJS/learn2.js" />
+        <option value="$PROJECT_DIR$/MyTest/Test-AngularJS/learn2-validate.html" />
       </list>
     </option>
   </component>
@@ -123,7 +138,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -133,7 +148,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -151,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -169,10 +185,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yexiaodong.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yexiaodong.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yexiaodong.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yexiaodong.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test-兼容性" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,18 +233,18 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyPlugin" />
+      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io" />
+      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-js\离线应用" />
+      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\My97日期控件" />
+      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Html\调试-Chrome" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\Swiper-轮播图" />
       <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\My97日期控件" />
       <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest" />
       <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Scripts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io" />
-      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-js\离线应用" />
-      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Plugin\My97日期控件" />
-      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-Html\调试-Chrome" />
-      <recent name="C:\Users\fits\Documents\GitHub\yexiaodong.github.io\MyTest\Test-东莞移动医疗系统" />
     </key>
   </component>
   <component name="RunManager">
@@ -312,6 +359,14 @@
       <workItem from="1475810607557" duration="2143000" />
       <workItem from="1475888144761" duration="626000" />
       <workItem from="1476234582155" duration="75000" />
+      <workItem from="1476796764827" duration="4630000" />
+      <workItem from="1476925833870" duration="168000" />
+      <workItem from="1478077210681" duration="5201000" />
+      <workItem from="1478139894702" duration="25000" />
+      <workItem from="1478161768689" duration="955000" />
+      <workItem from="1478223233666" duration="595000" />
+      <workItem from="1478310545477" duration="5463000" />
+      <workItem from="1478484499568" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="测试样例">
       <created>1465721296189</created>
@@ -324,13 +379,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183608000" />
+    <option name="totallyTimeSpent" value="200689000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25256976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19472913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -396,55 +451,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-东莞移动医疗系统/demo2-统一排班.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-东莞移动医疗系统/demo1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-js/本地存储/cookie的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="9" selection-start-line="48" selection-start-column="8" selection-end-line="51" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-js/本地存储/Storage的使用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-js/本地存储/Storage的使用-事件监听.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="13" selection-start-line="5" selection-start-column="4" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-js/本地存储/Storage的应用-访问计数器.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyTest/Test-东莞移动医疗系统/demo1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyTest/Test-Html/调试-Chrome/实时代码编辑.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -743,16 +749,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyPlugin/jquery-1.8.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="-126">
           <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyPlugin/1-TableFixWidth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyPlugin/jquery.seaton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTest/Test-AngularJS/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTest/Test-兼容性/IE7-z-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTest/Test-AngularJS/learn2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="41" column="6" selection-start-line="23" selection-start-column="0" selection-end-line="41" selection-end-column="6" />
           <folding>
-            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTest/Test-AngularJS/learn2-validate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="128" column="11" selection-start-line="128" selection-start-column="11" selection-end-line="135" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
